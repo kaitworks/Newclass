@@ -2,168 +2,220 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lộ trình Giao tiếp Tiếng Anh </title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English Communication · 9 Weeks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
+
+/* ── Reset & Base ───────────────────────────────────────────── */
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
-.wrap{max-width:820px;margin:0 auto;background:#fff;min-height:100vh}
-.hero{padding:2.5rem 2rem 2rem;border-bottom:1px solid #E8EBF0}
-.tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;background:#EAF4FD;color:#1A3C5E;padding:4px 12px;border-radius:20px;margin-bottom:.75rem}
-.h1{font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:#1A3C5E;line-height:1.3;margin-bottom:.5rem}
-.sec{padding:1.75rem 2rem;border-bottom:1px solid #E8EBF0}
-.slabel{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6B7280;margin-bottom:1rem}
-/* refs */
-.ref-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
-.rcard{background:#fff;border:1px solid #E8EBF0;border-radius:8px;padding:.65rem .9rem;text-decoration:none;display:block;transition:border-color .15s}
-.rcard:hover{border-color:#2E6DA4}
-.rcat{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
-.rname{font-size:13px;font-weight:500;color:#1C2B3A}
-.rdesc{font-size:11px;color:#6B7280;line-height:1.4;margin-top:2px}
-.cn{color:#1D6F4B}.cl{color:#2E6DA4}.cd{color:#7A4F0D}
-/* ladder */
-.ladder{border:1px solid #E8EBF0;border-radius:12px;overflow:hidden;margin-bottom:.75rem}
-.lrow{display:grid;grid-template-columns:106px 1fr;border-bottom:1px solid #E8EBF0}
+html{font-size:15px;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:#F6F4F0;color:#1C2130;min-height:100vh;line-height:1.6}
+
+/* ── Layout ────────────────────────────────────────────────── */
+.app{max-width:980px;margin:0 auto;padding:0 0 4rem}
+
+/* ── Top nav ───────────────────────────────────────────────── */
+.topnav{background:#1C2130;padding:.75rem 1.5rem;display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:100}
+.topnav .nav-title{font-size:13px;font-weight:600;color:#fff;letter-spacing:.02em;flex:1}
+.main-tabs{display:flex;gap:4px}
+.main-tab{padding:5px 16px;border-radius:20px;border:none;font-size:12.5px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;color:rgba(255,255,255,.6);background:transparent;transition:all .15s}
+.main-tab:hover{color:#fff;background:rgba(255,255,255,.1)}
+.main-tab.on{background:#fff;color:#1C2130}
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero{padding:2.5rem 1.5rem 1.75rem;border-bottom:1px solid #E8E4DD}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6B8AFF;margin-bottom:.6rem}
+.h1{font-family:'DM Serif Display',serif;font-size:2.2rem;font-weight:400;line-height:1.2;color:#1C2130;margin-bottom:.5rem}
+.hero-sub{font-size:14px;color:#6B7280;max-width:520px}
+
+/* ── Main panels ───────────────────────────────────────────── */
+.main-panel{display:none;padding:0 1.5rem}
+.main-panel.on{display:block}
+
+/* ── Section ───────────────────────────────────────────────── */
+.sec{padding:1.5rem 0;border-bottom:1px solid #E8E4DD}
+.slabel{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7280;margin-bottom:.85rem}
+
+/* ── Reference grid ────────────────────────────────────────── */
+.ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.rcard{display:block;padding:.7rem .9rem;border:.5px solid #E8E4DD;border-radius:8px;text-decoration:none;background:#fff;transition:all .15s}
+.rcard:hover{border-color:#6B8AFF;box-shadow:0 2px 8px rgba(107,138,255,.12)}
+.rcat{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#9CA3AF;margin-bottom:2px}
+.rname{font-size:13px;font-weight:600;color:#1C2130}
+.rdesc{font-size:11.5px;color:#6B7280;margin-top:1px}
+
+/* ── Structure cards ───────────────────────────────────────── */
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1rem}
+.scard{background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:1rem 1.1rem}
+.scard h3{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#92700A;margin-bottom:.5rem}
+.scard-d{font-size:12px;color:#6B7280;margin-bottom:.75rem;line-height:1.55}
+.ssteps{display:flex;flex-direction:column;gap:6px}
+.sstep{display:flex;gap:10px;align-items:flex-start}
+.snum{min-width:26px;height:26px;border-radius:50%;background:#FEF3C7;color:#92700A;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.stext{font-size:12.5px;font-weight:500;color:#1C2130}
+.seg{font-size:11.5px;color:#6B7280;font-style:italic;margin-top:1px}
+
+/* ── Abstraction Ladder ────────────────────────────────────── */
+.ladder{border:.5px solid #E8E4DD;border-radius:10px;overflow:hidden;margin-top:.75rem}
+.lrow{display:flex;gap:0;border-bottom:.5px solid rgba(0,0,0,.06)}
 .lrow:last-child{border-bottom:none}
-.llevel{padding:.6rem .75rem;border-right:1px solid #E8EBF0;display:flex;flex-direction:column;justify-content:center;gap:2px}
-.ll-name{font-size:11.5px;font-weight:600}
-.ll-hint{font-size:10px;color:#6B7280}
-.lcontent{padding:.6rem .9rem}
-.lq{font-size:12px;font-weight:500;margin-bottom:2px}
-.le{font-size:11.5px;color:#6B7280;font-style:italic}
-.la-bg{background:#EEEAFC}.la-col{color:#3B2F7A}
-.lm-bg{background:#EAF4FD}.lm-col{color:#1A3C5E}
-.lc-bg{background:#FDF3E0}.lc-col{color:#7A4F0D}
-.ltip{background:#F5F6F8;border:1px solid #E8EBF0;border-radius:8px;padding:.65rem 1rem;margin-bottom:1.25rem;font-size:12px;color:#6B7280;line-height:1.8}
-.ltip strong{color:#1C2B3A;font-weight:500}
-/* structures */
-.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.25rem}
-.scard{background:#fff;border:1px solid #E8EBF0;border-radius:12px;padding:1rem 1.25rem;border-top:3px solid #2E6DA4}
-.scard h3{font-size:13.5px;font-weight:600;color:#1A3C5E;margin-bottom:.35rem}
-.scard-d{font-size:11.5px;color:#6B7280;line-height:1.6;margin-bottom:.65rem}
-.ssteps{display:flex;flex-direction:column;gap:5px}
-.sstep{display:flex;align-items:flex-start;gap:7px}
-.snum{min-width:18px;height:18px;border-radius:50%;background:#EAF4FD;color:#2E6DA4;font-size:10px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.stext{font-size:12px;line-height:1.5}
-.seg{font-size:11px;color:#6B7280;font-style:italic}
-/* phrases */
-.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.pchip{background:#F5F6F8;border:1px solid #E8EBF0;border-radius:5px;padding:5px 9px;font-size:11.5px;text-align:center;color:#1C2B3A}
+.la-bg{background:#FFF9E6}.lm-bg{background:#F0FAFA}.lc-bg{background:#F0FBF7}
+.llevel{min-width:90px;padding:.7rem .85rem;border-right:.5px solid rgba(0,0,0,.08)}
+.ll-name{font-size:12px;font-weight:700}
+.la-col{color:#92700A}.lm-col{color:#147A6A}.lc-col{color:#1A7A60}
+.ll-hint{font-size:10.5px;color:#9CA3AF;margin-top:1px}
+.lcontent{padding:.7rem .9rem;flex:1}
+.lq{font-size:12.5px;font-weight:600;color:#1C2130;margin-bottom:3px}
+.le{font-size:12px;color:#6B7280;font-style:italic}
+.ltip{background:#E8F8F4;border:.5px solid #A8D9C8;border-radius:8px;padding:.7rem .9rem;margin-top:.75rem;font-size:12px;color:#374151;line-height:1.7}
 
-
-
-
-
-
-.main-tabs{display:flex;gap:0;border-bottom:2px solid #E8EBF0;padding:0 2rem;background:#fff;position:sticky;top:0;z-index:10}
-.main-tab{padding:.75rem 1.5rem;font-size:13px;font-weight:500;color:#6B7280;cursor:pointer;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-family:'Inter',sans-serif;transition:all .15s}
-.main-tab:hover{color:#1A3C5E}
-.main-tab.on{color:#1A3C5E;border-bottom-color:#1A3C5E;font-weight:600}
-.main-panel{display:none}.main-panel.on{display:block}
-
-.itv-top{display:flex;align-items:baseline;gap:6px;margin-bottom:2px}
-.itv-type{font-size:9.5px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;background:#F0F1F3;border-radius:3px;padding:1px 5px;flex-shrink:0}
-.itv-ex{font-size:10.5px;color:#9CA3AF;font-style:italic;line-height:1.4;margin-top:2px;display:block}
-
-
-.vc-group{margin-bottom:8px;border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);overflow:hidden}
-.vc-group-btn{width:100%;text-align:left;padding:.65rem 1rem;background:var(--color-background-secondary);border:none;cursor:pointer;font-family:'Sora',sans-serif;font-size:13px;font-weight:500;color:var(--color-text-primary);display:flex;justify-content:space-between;align-items:center;gap:8px}
-.vc-group-btn:hover{background:#EEEDFE}
-.vc-group-btn .vc-g-arrow{font-size:11px;color:#6B5AE0;transition:transform .2s}
+/* ── Vocabulary collapses ──────────────────────────────────── */
+.vc-group{margin-bottom:6px;border:.5px solid #E8E4DD;border-radius:9px;overflow:hidden}
+.vc-group-btn{width:100%;text-align:left;padding:.65rem 1rem;background:#fff;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1C2130;display:flex;justify-content:space-between;align-items:center;gap:8px;transition:background .15s}
+.vc-group-btn:hover{background:#F6F4F0}
+.vc-group-btn .vc-g-arrow{font-size:11px;color:#6B8AFF;transition:transform .2s}
 .vc-group-btn.open .vc-g-arrow{transform:rotate(90deg)}
-.vc-group-inner{display:none;padding:8px;flex-direction:column;gap:5px;background:var(--color-background-primary)}
+.vc-group-inner{display:none;padding:8px;flex-direction:column;gap:5px;background:#FAFAFA}
 .vc-group-inner.open{display:flex}
-.vc-g-count{font-size:11px;color:var(--color-text-secondary);font-weight:400}
+.vc-g-count{font-size:11px;color:#9CA3AF;font-weight:400}
 
-.vcollapse{border:1px solid #E8EBF0;border-radius:8px;overflow:hidden}
-.vctoggle{width:100%;display:flex;align-items:center;gap:8px;padding:.6rem 1rem;background:#F5F6F8;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#1C2B3A;text-align:left;transition:background .15s}
-.vctoggle:hover{background:#EAF4FD}
-.vctoggle.open{background:#EAF4FD;color:#1A3C5E}
-.vc-arrow{font-size:9px;color:#6B7280;transition:transform .2s;display:inline-block;margin-right:2px}
+.vcollapse{margin-bottom:5px;border:.5px solid #E8E4DD;border-radius:8px;overflow:hidden;background:#fff}
+.vctoggle{width:100%;text-align:left;padding:.55rem .9rem;background:transparent;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:500;color:#1C2130;display:flex;align-items:center;gap:6px;transition:background .15s}
+.vctoggle:hover{background:#F6F4F0}
+.vc-arrow{font-size:10px;color:#6B8AFF;transition:transform .2s;display:inline-block}
 .vctoggle.open .vc-arrow{transform:rotate(90deg)}
-.vc-count{margin-left:auto;font-size:10.5px;font-weight:500;color:#6B7280;background:#fff;border:1px solid #E8EBF0;border-radius:20px;padding:1px 8px}
-.itvgrid.vchidden{display:none!important;padding:.65rem}
-.itvgrid.vchidden.open{display:grid!important}
-.itvgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:5px}
-.itvc{background:#F5F6F8;border:1px solid #E8EBF0;border-radius:6px;padding:6px 10px;display:flex;flex-direction:column;gap:2px}
-.itv-word{font-size:12.5px;font-weight:600;color:#1A3C5E}
-.itv-def{font-size:11px;color:#6B7280;line-height:1.4}
-/* week tabs */
-.wtabs{display:flex;gap:6px;margin-bottom:1.25rem}
-.wtab{padding:6px 18px;border-radius:20px;border:1px solid #E8EBF0;font-size:12.5px;font-weight:500;cursor:pointer;background:#F5F6F8;color:#6B7280;transition:all .15s;font-family:'Inter',sans-serif}
-.wtab.on{background:#1A3C5E;color:#fff;border-color:#1A3C5E}
-.wpanel{display:none}.wpanel.on{display:flex;flex-direction:column;gap:10px}
-/* session cards */
-.sc2{background:#fff;border:1px solid #E8EBF0;border-radius:12px;overflow:hidden}
-.shead{display:flex;align-items:center;gap:10px;padding:.75rem 1rem}
-.sbadge{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
-.bb{background:#EAF4FD;color:#1A3C5E}.bg{background:#E6F5EE;color:#1D6F4B}.ba{background:#FDF3E0;color:#7A4F0D}.bp{background:#EEEAFC;color:#3B2F7A}
-.sn2{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
-.nb{background:#EAF4FD;color:#1A3C5E}.ng{background:#E6F5EE;color:#1D6F4B}.na{background:#FDF3E0;color:#7A4F0D}.np{background:#EEEAFC;color:#3B2F7A}
-.stitle{font-size:14px;font-weight:500;flex:1}
-.sbody{padding:.75rem 1rem;border-top:1px solid #E8EBF0}
+.vc-count{font-size:10.5px;color:#9CA3AF;margin-left:auto}
+.itvgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;padding:8px}
+.itvgrid.vchidden{display:none}
+.itvc{background:#F6F4F0;border-radius:7px;padding:8px 10px}
+.itv-top{display:flex;align-items:center;gap:6px;margin-bottom:3px}
+.itv-word{font-size:13px;font-weight:600;color:#1C2130}
+.itv-type{font-size:10px;background:#EEF1FF;color:#6B8AFF;padding:1px 6px;border-radius:4px;font-weight:500}
+.itv-def{display:block;font-size:11.5px;color:#6B7280;margin-bottom:2px}
+.itv-ex{display:block;font-size:11.5px;color:#9CA3AF;font-style:italic}
 
-/* topics */
-.tblock{margin-bottom:1rem}.tblock:last-child{margin-bottom:0}
-.tlabel{font-size:11.5px;font-weight:600;color:#6B7280;margin-bottom:.4rem;display:flex;align-items:center;gap:5px}
-.tdot{width:6px;height:6px;border-radius:50%;background:#2E6DA4;flex-shrink:0}
-.qlist{display:flex;flex-direction:column;gap:3px;margin-bottom:.55rem}
-.qi{font-size:12.5px;color:#1C2B3A;padding:4px 8px;background:#F5F6F8;border-radius:5px;line-height:1.4}
+.vc{display:inline-block}
+
+/* ── Vocab list (session vocab) ────────────────────────────── */
+.vlist{display:flex;flex-wrap:wrap;gap:5px;padding:8px 0}
+.vlist .vc{background:#EEF1FF;color:#4B5ECC;font-size:12px;padding:3px 10px;border-radius:20px;font-weight:500}
+
+/* ── vtoggle button ────────────────────────────────────────── */
+.vtoggle{background:none;border:.5px solid #E8E4DD;border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#6B7280;margin-top:6px;transition:all .15s}
+.vtoggle:hover{border-color:#6B8AFF;color:#6B8AFF}
+.vtoggle-p{background:none;border:.5px solid #E8E4DD;border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;color:#6B7280;margin-top:6px;display:inline-flex;align-items:center;gap:5px;transition:all .15s}
+
+/* ── Week tabs ─────────────────────────────────────────────── */
+.wtabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1.25rem;padding-top:1.25rem}
+.wtab{padding:5px 16px;border-radius:20px;border:.5px solid #E8E4DD;background:#fff;font-size:12.5px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;color:#6B7280;transition:all .15s}
+.wtab:hover{border-color:#6B8AFF;color:#6B8AFF}
+.wtab.on{background:#1C2130;color:#fff;border-color:#1C2130}
+.wpanel{display:none;flex-direction:column;gap:10px}
+.wpanel.on{display:flex}
+
+/* ── Session cards ─────────────────────────────────────────── */
+.sc2{background:#fff;border:.5px solid #E8E4DD;border-radius:12px;overflow:hidden}
+.shead{display:flex;align-items:center;gap:10px;padding:.85rem 1.1rem;border-bottom:.5px solid #F0EDE8}
+.sn2{width:30px;height:30px;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nb{background:#EEF1FF;color:#4B5ECC}
+.ng{background:#E6F5EE;color:#1D6F4B}
+.na{background:#FFF0E6;color:#B85A00}
+.np{background:#E8F5FF;color:#1A5C8A}
+.sbadge{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+.bb{background:#EEF1FF;color:#4B5ECC}
+.bg{background:#E6F5EE;color:#1D6F4B}
+.ba{background:#FFF0E6;color:#B85A00}
+.bp{background:#E8F5FF;color:#1A5C8A}
+.stitle{font-size:13.5px;font-weight:600;color:#1C2130}
+.sbody{padding:1rem 1.1rem}
+
+/* ── Topic blocks ──────────────────────────────────────────── */
+.tblock{margin-bottom:.85rem}
+.tblock:last-child{margin-bottom:0}
+.tlabel{font-size:12px;font-weight:600;color:#6B7280;margin-bottom:.55rem;display:flex;align-items:center;gap:5px}
+.tdot{width:6px;height:6px;border-radius:50%;background:#6B8AFF;display:inline-block;flex-shrink:0}
+
+/* ── Q&A items ─────────────────────────────────────────────── */
+.qlist{display:flex;flex-direction:column;gap:4px;margin-bottom:.6rem}
+.qi{font-size:12.5px;color:#374151;padding:7px 10px;background:#F6F4F0;border-radius:6px;line-height:1.45}
+.dq-p{font-size:12.5px;color:#374151;padding:6px 10px;background:#FFF8F0;border-radius:6px;line-height:1.45;border-left:2px solid #F59E0B}
+
 .qi-wrap{margin-bottom:4px}
-.qi-q{font-size:12.5px;color:#1C2B3A;padding:6px 8px;background:#F5F6F8;border-radius:5px 5px 0 0;line-height:1.4;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:6px;user-select:none}
-.qi-q:hover{background:#E8EBF0}
+.qi-q{font-size:12.5px;color:#1C2130;padding:7px 10px;background:#F6F4F0;border-radius:6px 6px 0 0;line-height:1.4;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:6px;user-select:none;transition:background .12s}
+.qi-q:hover{background:#EBEBEA}
 .qi-q-text{flex:1}
-.qi-toggle{font-size:10.5px;color:#2E6DA4;font-weight:600;white-space:nowrap;margin-top:1px;flex-shrink:0}
-.qi-ans{display:none;font-size:12px;color:var(--color-text-secondary);padding:8px 10px 9px;background:#EAF4FD;border-radius:0 0 5px 5px;line-height:1.7;border-top:.5px solid #C9DFF5}
+.qi-toggle{font-size:10.5px;color:#6B8AFF;font-weight:600;white-space:nowrap;margin-top:1px;flex-shrink:0}
+.qi-ans{display:none;font-size:12.5px;color:#374151;padding:9px 12px 10px;background:#F0F4FF;border-radius:0 0 6px 6px;line-height:1.7;border-top:.5px solid #C7D2F8}
 .qi-ans.open{display:block}
-.qi-ans .hl{color:#1A3C5E;font-weight:600}
-/* vocab */
-.vtoggle{font-size:11.5px;font-weight:500;color:#2E6DA4;background:none;border:1px solid #B5D4F4;border-radius:20px;padding:3px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:background .15s;font-family:'Inter',sans-serif}
-.vtoggle:hover{background:#EAF4FD}
-.vlist{display:none;flex-wrap:wrap;gap:5px;margin-top:.5rem}
-.vlist.open{display:flex}
-.vc{font-size:11.5px;background:#EAF4FD;border-radius:4px;padding:3px 9px;color:#1A3C5E;line-height:1.4}
-.vcp{font-size:11.5px;background:#EEEAFC;border-radius:4px;padding:3px 9px;color:#3B2F7A;line-height:1.4}
-/* presentation */
-.pcard{background:#FDF3E0;border:1px solid #F5D68A;border-radius:8px;padding:.75rem 1rem}
-.ptitle{font-size:14px;font-weight:600;color:#7A4F0D;margin-bottom:.35rem}
-.pdesc{font-size:12.5px;color:#7A4F0D;opacity:.85;line-height:1.5;margin-bottom:.5rem}
+.qi-ans .hl{color:#1A2F7A;font-weight:600}
+
+/* ── Presentation cards ────────────────────────────────────── */
+.pcard{background:#FFF8F0;border:.5px solid #F5DFC0;border-radius:10px;padding:.9rem 1rem}
+.ptitle{font-size:15px;font-weight:700;color:#1C2130;margin-bottom:.35rem}
+.pdesc{font-size:12.5px;color:#6B7280;line-height:1.6;margin-bottom:.6rem}
 .ptips{display:flex;flex-wrap:wrap;gap:5px}
-.ptip{font-size:11px;background:rgba(255,255,255,.6);border-radius:4px;padding:3px 8px;color:#7A4F0D}
-/* demo */
-.demo-wrap{background:#F5F3FE;border:1px solid #C9C2F0;border-radius:12px;overflow:hidden}
-.demo-header{padding:.65rem 1rem;border-bottom:1px solid #C9C2F0;display:flex;align-items:center;gap:8px}
-.demo-htitle{font-size:13px;font-weight:600;color:#3B2F7A}
-.demo-hsub{font-size:11.5px;color:#6B5AE0;margin-left:auto}
-.demo-body{padding:.75rem 1rem}
-.demo-fw{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:.85rem}
-.df-step{background:#fff;border:1px solid #C9C2F0;border-radius:8px;padding:.5rem .6rem;text-align:center}
-.df-num{font-size:10px;font-weight:600;color:#6B5AE0;margin-bottom:2px}
-.df-label{font-size:11px;font-weight:500;color:#3B2F7A;line-height:1.3}
-.dslabel{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#6B5AE0;margin-bottom:.4rem}
-.dq-p{background:#fff;border:1px solid #C9C2F0;border-radius:5px;padding:4px 9px;font-size:12.5px;color:#1C2B3A;line-height:1.4}
-.dq-a{background:#EEEAFC;border-radius:5px;padding:4px 9px;font-size:12.5px;color:#3B2F7A;line-height:1.4}
-.vtoggle-p{font-size:11.5px;font-weight:500;color:#6B5AE0;background:none;border:1px solid #C9C2F0;border-radius:20px;padding:3px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-family:'Inter',sans-serif}
-.vtoggle-p:hover{background:#EEEAFC}
+.ptip{font-size:11.5px;background:#fff;border:.5px solid #F5DFC0;color:#B85A00;padding:3px 10px;border-radius:20px;font-weight:500}
+
+/* ── Demo wrap ─────────────────────────────────────────────── */
+.demo-wrap{background:#F6F4F0;border-radius:10px;overflow:hidden}
+.demo-header{display:flex;align-items:center;gap:10px;padding:.8rem 1rem;background:#1C2130}
+.demo-htitle{font-size:13px;font-weight:600;color:#fff}
+.demo-hsub{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
+.demo-body{padding:.9rem 1rem}
+.dslabel{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9CA3AF;margin-bottom:.5rem}
+.demo-fw{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.85rem}
+.df-step{background:#fff;border:.5px solid #E8E4DD;border-radius:6px;padding:5px 12px;font-size:12px;font-weight:600;color:#1C2130}
+
+/* ── Phrase chips ──────────────────────────────────────────── */
+.pchip{background:#fff;border:.5px solid #E8E4DD;border-radius:8px;padding:8px 12px;font-size:12.5px;color:#374151;font-weight:500}
+
+/* ── Phát triển ý ──────────────────────────────────────────── */
+
+/* ── Misc ───────────────────────────────────────────────────── */
+@media (max-width:600px){
+  .sgrid{grid-template-columns:1fr}
+  .itvgrid{grid-template-columns:1fr}
+}
+
+
+/* === Blue & Yellow Theme Override === */
+body{background:#f4fbff !important}
+.topnav,.wtab.on,.demo-header{background:#6bb6ff !important}
+.main-tab.on{color:#0f4c81 !important}
+.tag,.vc-arrow,.vc-g-arrow,.tdot{color:#f0b429 !important}
+.hero{background:linear-gradient(135deg,#eef9ff,#fff8db)}
+.rcard:hover,.wtab:hover{border-color:#f0b429 !important}
+.scard h3,.ll-name.la-col{color:#c28a00 !important}
+.snum{background:#fff3c4 !important;color:#b37b00 !important}
+.itv-type{background:#e8f4ff !important;color:#2c74b3 !important}
+.vlist .vc{background:#e8f4ff !important;color:#2c74b3 !important}
+
 </style>
 </head>
 <body>
-<div class="wrap">
-<div class="main-tabs">
-  <button class="main-tab on" onclick="switchTab(1,this)">Tài liệu</button>
-  <button class="main-tab" onclick="switchTab(2,this)">Lịch học</button>
-</div>
-<div class="main-panel on" id="mp1"><div class="hero">
-  <div class="tag">English Communication </div>
+<div class="app">
+
+  <nav class="topnav">
+    <div class="nav-title">English Communication</div>
+    <div class="main-tabs">
+      <button class="main-tab on" onclick="switchTab(1,this)">Resources</button>
+      <button class="main-tab" onclick="switchTab(2,this)">Schedule</button>
+    </div>
+  </nav>
+
+  <div class="main-panel on" id="mp1">
+    <div class="hero">
+  <div class="tag">English Communication · 9 weeks</div>
   <div class="h1">Lộ trình Giao tiếp Tiếng Anh</div>
   
 </div>
 
 <!-- REFERENCES -->
 <div class="sec">
-  <div class="slabel">Tài liệu</div>
+  <div class="slabel">Learning Resources</div>
   <div class="ref-grid">
     <a class="rcard" href="https://www.4english.vn" target="_blank"><div class="rcat cl">Học tiếng Anh</div><div class="rname">4English</div><div class="rdesc">Bài học, từ vựng, luyện nghe có context thực tế</div></a>
     <a class="rcard" href="https://learningenglish.voanews.com" target="_blank"><div class="rcat cn">Báo song ngữ</div><div class="rname">VOA Learning English</div><div class="rdesc">Tin tức đơn giản, có audio &amp; transcript đầy đủ</div></a>
@@ -178,173 +230,111 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 
 <!-- THEORY -->
 <div class="sec">
-  <div class="slabel">Lý thuyết</div>
+  <div class="slabel">Theory &amp; Answer Structures</div>
   <div style="font-size:13.5px;font-weight:500;margin-bottom:.4rem">Abstraction Ladder</div>
-  <p style="font-size:12.5px;color:#6B7280;line-height:1.75;margin-bottom:.75rem">Every idea exists on a ladder from <strong style="color:#1C2B3A;font-weight:500">concrete → abstract</strong>. Moving up means generalising to a bigger point; moving down means grounding it in a real example. The best communicators move fluidly between both.</p>
+  <p style="font-size:12.5px;color:#6B7280;line-height:1.75;margin-bottom:.75rem">Mọi ý kiến đều nằm trên một thang từ <strong style="color:#1C2B3A;font-weight:500">cụ thể → trừu tượng</strong>. Leo lên nghĩa là khái quát hoá thành ý lớn hơn; xuống thang nghĩa là đưa ví dụ thực tế để minh chứng. Người giao tiếp tốt biết di chuyển linh hoạt giữa hai đầu thang.</p>
   <div class="ladder">
     <div class="lrow la-bg"><div class="llevel"><div class="ll-name la-col">↑ Abstract</div><div class="ll-hint">Values, principles</div></div><div class="lcontent"><div class="lq">Big idea — conclusion or belief</div><div class="le">"Social media is changing what we think success looks like."</div></div></div>
     <div class="lrow lm-bg"><div class="llevel"><div class="ll-name lm-col">· Middle</div><div class="ll-hint">Pattern, observation</div></div><div class="lcontent"><div class="lq">Observation — a trend or category</div><div class="le">"People increasingly measure their own progress by comparing it to curated highlights online."</div></div></div>
     <div class="lrow lc-bg"><div class="llevel"><div class="ll-name lc-col">↓ Concrete</div><div class="ll-hint">Fact, example</div></div><div class="lcontent"><div class="lq">Specific fact — something verifiable</div><div class="le">"A friend of mine got promoted last year and said it felt empty because it looked better on Instagram than it felt in real life."</div></div></div>
   </div>
-  <div class="ltip">
-    <strong>Move up ↑ when?</strong> You are getting lost in detail — generalise to find common ground, bring everyone về cùng big picture.<br>
-    <strong>Xuống thang ↓ khi nào?</strong> Ý kiến còn mơ hồ → đưa ví dụ cụ thể để thuyết phục và tránh bị hỏi ngược.<br>
-    <strong>PREP:</strong> Point (Abstract) → Reason (Middle) → Example (Concrete) → Point (Abstract lại).<br>
-    <strong>SITA:</strong> Situation/Issue (Concrete) → Take (Middle/Abstract) → Ask (align toàn team).
+  <div class="ltip" style="background:#E8F8F4;border:.5px solid #A8D9C8;border-radius:8px;padding:.7rem .9rem;margin-top:.75rem;font-size:12px;color:#374151;line-height:1.7">
+    <strong>Leo lên ↑ khi nào?</strong> Đang sa vào chi tiết — lùi lại, khái quát hoá, và kéo mọi người về cùng bức tranh toàn cảnh.<br>
+    <strong>Xuống thang ↓ khi nào?</strong> Ý kiến còn mơ hồ — đưa ví dụ hoặc dẫn chứng cụ thể để thuyết phục và khó bị phản bác hơn.<br>
+    <strong>PREP:</strong> Point (Trừu tượng) → Reason (Giữa) → Example (Cụ thể) → Point (Trừu tượng).<br>
+    <strong>SITA:</strong> Situation / Issue (Cụ thể) → Take (Giữa / Trừu tượng) → Ask (đồng thuận nhóm).
   </div>
 
-  <div style="font-size:13.5px;font-weight:500;margin-bottom:.65rem">2 cấu trúc trả lời phổ biến</div>
   <div class="sgrid">
     <div class="scard"><h3>Structure A · P-R-E-P</h3><div class="scard-d">Dùng cho câu hỏi ý kiến, thảo luận, phản biện lịch sự trong meeting.</div><div class="ssteps"><div class="sstep"><div class="snum">P</div><div><div class="stext"><strong>Point</strong> — Quan điểm</div><div class="seg">"I think the best approach here is..."</div></div></div><div class="sstep"><div class="snum">R</div><div><div class="stext"><strong>Reason</strong> — Lý do</div><div class="seg">"Because it helps us reduce..."</div></div></div><div class="sstep"><div class="snum">E</div><div><div class="stext"><strong>Example</strong> — Ví dụ</div><div class="seg">"For instance, last month our team..."</div></div></div><div class="sstep"><div class="snum">P</div><div><div class="stext"><strong>Point</strong> — Tóm lại</div><div class="seg">"So that's why I'd recommend..."</div></div></div></div></div>
     <div class="scard"><h3>Structure B · S-I-T-A</h3><div class="scard-d">Dùng khi update tiến độ, báo cáo vấn đề, đề xuất giải pháp.</div><div class="ssteps"><div class="sstep"><div class="snum">S</div><div><div class="stext"><strong>Situation</strong> — Bối cảnh</div><div class="seg">"Currently, we're at stage 2 of..."</div></div></div><div class="sstep"><div class="snum">I</div><div><div class="stext"><strong>Issue</strong> — Vấn đề</div><div class="seg">"The challenge we're facing is..."</div></div></div><div class="sstep"><div class="snum">T</div><div><div class="stext"><strong>Take</strong> — Đề xuất</div><div class="seg">"What I'd suggest is we..."</div></div></div><div class="sstep"><div class="snum">A</div><div><div class="stext"><strong>Ask</strong> — Xác nhận</div><div class="seg">"Does that work for everyone?"</div></div></div></div></div>
 
-  <!-- 5W1H TIP -->
-  <div style="background:#F5F3FE;border:.5px solid #C9C2F0;border-radius:var(--border-radius-md);padding:.85rem 1rem;margin-top:.85rem">
-    <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#6B5AE0;margin-bottom:.6rem">💡 Làm giàu câu trả lời với 5W1H</div>
-    <div style="font-size:12.5px;color:var(--color-text-secondary);line-height:1.8">
-      Lồng các câu hỏi <strong style="color:var(--color-text-primary)">What / Why / Where / When / How / Who</strong> vào từng bước của PREP hoặc SITA để câu trả lời đầy đủ và thuyết phục hơn:
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:.6rem">
-        <div style="background:var(--color-background-primary);border:.5px solid #C9C2F0;border-radius:5px;padding:6px 10px;font-size:12px"><strong style="color:#6B5AE0">PREP</strong> · Point = <em>What</em> do I think? → Reason = <em>Why</em>? → Example = <em>When/How</em> did this happen? → Point = <em>What</em> is my conclusion?</div>
-        <div style="background:var(--color-background-primary);border:.5px solid #C9C2F0;border-radius:5px;padding:6px 10px;font-size:12px"><strong style="color:#6B5AE0">SITA</strong> · Situation = <em>What/Where/When</em>? → Issue = <em>What</em> went wrong &amp; <em>Why</em>? → Take = <em>How</em> to fix? → Ask = <em>Who</em> agrees?</div>
-      </div>
+</div>
+
+<!-- 5W1H TIP -->
+<div style="background:#FFFBEB;border:.5px solid #F5D87A;border-radius:10px;padding:1rem 1.1rem;margin-top:.85rem">
+  <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#92700A;margin-bottom:.55rem">Enrich your answers with 5W1H</div>
+  <div style="font-size:13px;color:#374151;line-height:1.7;margin-bottom:.75rem">
+    Lồng các câu hỏi <strong style="color:#1C2130">What / Why / Where / When / How / Who</strong> vào từng bước của PREP hoặc SITA để câu trả lời đầy đủ và thuyết phục hơn.
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+    <div style="background:#fff;border:.5px solid #F5D87A;border-radius:8px;padding:.7rem .9rem;font-size:12.5px;line-height:1.75">
+      <strong style="color:#92700A;display:block;margin-bottom:4px">PREP</strong>
+      Point = <em>What</em> do I think?<br>
+      Reason = <em>Why</em>?<br>
+      Example = <em>When / How</em> did this happen?<br>
+      Point = <em>What</em> is my conclusion?
+    </div>
+    <div style="background:#fff;border:.5px solid #F5D87A;border-radius:8px;padding:.7rem .9rem;font-size:12.5px;line-height:1.75">
+      <strong style="color:#92700A;display:block;margin-bottom:4px">SITA</strong>
+      Situation = <em>What / Where / When</em>?<br>
+      Issue = <em>What</em> went wrong &amp; <em>Why</em>?<br>
+      Take = <em>How</em> to fix?<br>
+      Ask = <em>Who</em> agrees?
     </div>
   </div>
-
-  
-  <!-- SPEAKING FLOW -->
-  <div style="background:#FFF8E8;border:.5px solid #F5D68A;border-radius:12px;padding:.85rem 1rem;margin-top:.85rem">
-    <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#7A4F0D;margin-bottom:.6rem">
-      Speaking Flow (PREP + SITA Booster)
-    </div>
-    <table style="width:100%;border-collapse:collapse;font-size:12px;line-height:1.6">
-      <tr style="background:#FDF3E0">
-        <th style="padding:8px;border:1px solid #E8EBF0;text-align:left">Chức năng</th>
-        <th style="padding:8px;border:1px solid #E8EBF0;text-align:left">Cụm chính</th>
-        <th style="padding:8px;border:1px solid #E8EBF0;text-align:left">Cụm thay thế</th>
-      </tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Mở đầu</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>To begin with</strong></td><td style="padding:8px;border:1px solid #E8EBF0">First of all / To start with / I'd like to start by saying that / From my perspective / Personally speaking</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Chuyển ý</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>When it comes to</strong></td><td style="padding:8px;border:1px solid #E8EBF0">Regarding / As for / In terms of / With regard to / Speaking of</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Quan điểm</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>I'd say that</strong></td><td style="padding:8px;border:1px solid #E8EBF0">I would argue that / I tend to think that / It seems to me that / I strongly believe that</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Lý do</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>The main reason is that</strong></td><td style="padding:8px;border:1px solid #E8EBF0">This is mainly because / One reason is that / The reason for this is that</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Thêm ý</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>Furthermore</strong></td><td style="padding:8px;border:1px solid #E8EBF0">Moreover / What's more / In addition / On top of that</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Ví dụ</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>For example</strong></td><td style="padding:8px;border:1px solid #E8EBF0">For instance / To give you an example / One clear example is</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Kết quả</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>As a result</strong></td><td style="padding:8px;border:1px solid #E8EBF0">Consequently / Therefore / This leads to / That's why</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Kết luận</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>To sum up</strong></td><td style="padding:8px;border:1px solid #E8EBF0">Overall / In conclusion / To wrap things up / Ultimately</td></tr>
-      <tr><td style="padding:8px;border:1px solid #E8EBF0">Tương lai</td><td style="padding:8px;border:1px solid #E8EBF0"><strong>Looking ahead</strong></td><td style="padding:8px;border:1px solid #E8EBF0">In the near future / Moving forward / In the coming years / It's likely that</td></tr>
-    </table>
-  </div>
-
-  <div class="slabel" style="margin-bottom:.6rem">Cụm từ hay dùng trong meeting</div>
-  <div style="display:flex;flex-direction:column;gap:8px">
-    <div><div style="font-size:11px;font-weight:600;color:#6B7280;margin-bottom:5px">Mở đầu &amp; đưa ý kiến</div><div class="pgrid"><div class="pchip">Just to add on that...</div><div class="pchip">From my perspective...</div><div class="pchip">Building on what you said...</div><div class="pchip">I'd like to flag that...</div></div></div>
-    <div><div style="font-size:11px;font-weight:600;color:#6B7280;margin-bottom:5px">Làm rõ &amp; hỏi lại</div><div class="pgrid"><div class="pchip">Could you elaborate on...?</div><div class="pchip">Just to clarify, do you mean...?</div><div class="pchip">I want to make sure I understand...</div><div class="pchip">What do you think about...?</div></div></div>
-    <div><div style="font-size:11px;font-weight:600;color:#6B7280;margin-bottom:5px">Đồng ý &amp; phản bác lịch sự</div><div class="pgrid"><div class="pchip">That makes sense, and...</div><div class="pchip">I see your point, however...</div><div class="pchip">That's a valid concern...</div><div class="pchip">I'm not entirely sure about that...</div></div></div>
-    <div><div style="font-size:11px;font-weight:600;color:#6B7280;margin-bottom:5px">Kết thúc &amp; tổng kết</div><div class="pgrid"><div class="pchip">To wrap up quickly...</div><div class="pchip">Let's take this offline.</div><div class="pchip">So the action item here is...</div><div class="pchip">Are we all aligned on this?</div></div></div>
-  </div>
+</div>
 
 
 <div style="margin-top:1.5rem">
-<div class="slabel" style="margin-bottom:.75rem">Phrases &amp; Câu hữu ích trong giao tiếp</div>
-<div style="display:flex;flex-direction:column;gap:6px">
-
-<div class="vcollapse">
-<button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Mở đầu cuộc trò chuyện <span class="vc-count">10 câu</span></button>
-<div class="itvgrid vchidden">
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Nice to meet you.</span><span class="itv-type">greeting</span></div><span class="itv-def">Rất vui được gặp bạn</span><span class="itv-ex">Nice to meet you — I've heard great things about your team.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">How have you been?</span><span class="itv-type">small talk</span></div><span class="itv-def">Dạo này bạn thế nào?</span><span class="itv-ex">How have you been since the last project wrapped up?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Thanks for making the time.</span><span class="itv-type">opening</span></div><span class="itv-def">Cảm ơn bạn đã sắp xếp thời gian</span><span class="itv-ex">Thanks for making the time — I know your schedule's been busy.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Shall we get started?</span><span class="itv-type">opening</span></div><span class="itv-def">Chúng ta bắt đầu nhé?</span><span class="itv-ex">Everyone's here, so shall we get started?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let me quickly introduce myself.</span><span class="itv-type">intro</span></div><span class="itv-def">Để tôi tự giới thiệu nhanh</span><span class="itv-ex">Let me quickly introduce myself — I'm Kait, the English instructor.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Before we dive in...</span><span class="itv-type">transition</span></div><span class="itv-def">Trước khi bắt đầu...</span><span class="itv-ex">Before we dive in, any questions from last time?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Just to set the context...</span><span class="itv-type">framing</span></div><span class="itv-def">Để đặt bối cảnh trước...</span><span class="itv-ex">Just to set the context, we're talking about the Q3 rollout.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I'll keep this brief.</span><span class="itv-type">framing</span></div><span class="itv-def">Tôi sẽ nói ngắn gọn thôi</span><span class="itv-ex">I'll keep this brief — just three points to cover.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Feel free to jump in.</span><span class="itv-type">invitation</span></div><span class="itv-def">Cứ tự nhiên ngắt lời/góp ý</span><span class="itv-ex">Feel free to jump in if you have questions along the way.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Good to see everyone here.</span><span class="itv-type">greeting</span></div><span class="itv-def">Vui khi thấy mọi người có mặt</span><span class="itv-ex">Good to see everyone here — let's make the most of our time.</span></div>
-</div></div>
-
-<div class="vcollapse">
-<button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Đưa ý kiến &amp; lập luận <span class="vc-count">10 câu</span></button>
-<div class="itvgrid vchidden">
-  <div class="itvc"><div class="itv-top"><span class="itv-word">The way I see it...</span><span class="itv-type">opinion</span></div><span class="itv-def">Theo cách tôi nhìn nhận...</span><span class="itv-ex">The way I see it, we need to fix the bug before the launch.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">That said...</span><span class="itv-type">contrast</span></div><span class="itv-def">Tuy nhiên... / Dù vậy...</span><span class="itv-ex">It's a good solution. That said, the cost might be a concern.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">To put it simply...</span><span class="itv-type">clarify</span></div><span class="itv-def">Nói đơn giản thì...</span><span class="itv-ex">To put it simply, we're behind schedule and need more time.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">What I mean is...</span><span class="itv-type">clarify</span></div><span class="itv-def">Ý tôi là...</span><span class="itv-ex">What I mean is, it's not a technical issue — it's a process one.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Here's the thing...</span><span class="itv-type">emphasis</span></div><span class="itv-def">Vấn đề là đây...</span><span class="itv-ex">Here's the thing — we can't delay this any further.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">My take on this is...</span><span class="itv-type">opinion</span></div><span class="itv-def">Góc nhìn của tôi về vấn đề này là...</span><span class="itv-ex">My take on this is that we should test before deploying.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">At the end of the day...</span><span class="itv-type">summary</span></div><span class="itv-def">Xét cho cùng thì...</span><span class="itv-ex">At the end of the day, the user experience is what matters most.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">It's worth noting that...</span><span class="itv-type">emphasis</span></div><span class="itv-def">Đáng chú ý là...</span><span class="itv-ex">It's worth noting that this affects three departments, not one.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">On the one hand... on the other hand...</span><span class="itv-type">balance</span></div><span class="itv-def">Một mặt... mặt khác...</span><span class="itv-ex">On one hand, it saves time. On the other, it raises security risks.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">To be fair...</span><span class="itv-type">balance</span></div><span class="itv-def">Thật ra mà nói...</span><span class="itv-ex">To be fair, the team did deliver under very tight constraints.</span></div>
-</div></div>
-
-<div class="vcollapse">
-<button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Hỏi &amp; xác nhận thông tin <span class="vc-count">10 câu</span></button>
-<div class="itvgrid vchidden">
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Could you walk me through that?</span><span class="itv-type">clarify</span></div><span class="itv-def">Bạn có thể giải thích rõ hơn không?</span><span class="itv-ex">Could you walk me through the steps you took to fix it?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">What's your take on this?</span><span class="itv-type">opinion ask</span></div><span class="itv-def">Bạn nghĩ sao về vấn đề này?</span><span class="itv-ex">We've heard from everyone else — what's your take on this?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Just to confirm...</span><span class="itv-type">confirm</span></div><span class="itv-def">Để xác nhận lại...</span><span class="itv-ex">Just to confirm — the deadline is this Friday, correct?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Sorry, could you repeat that?</span><span class="itv-type">clarify</span></div><span class="itv-def">Xin lỗi, bạn có thể nhắc lại không?</span><span class="itv-ex">Sorry, could you repeat that? I missed the last part.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">So what you're saying is...</span><span class="itv-type">paraphrase</span></div><span class="itv-def">Vậy ý bạn là...</span><span class="itv-ex">So what you're saying is we need to rethink the whole approach?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Does that make sense?</span><span class="itv-type">check-in</span></div><span class="itv-def">Như vậy có rõ không?</span><span class="itv-ex">I'll send the draft by Thursday. Does that make sense?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">How does that sound?</span><span class="itv-type">check-in</span></div><span class="itv-def">Nghe có ổn không?</span><span class="itv-ex">We could move the meeting to Wednesday. How does that sound?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">What do you need from me?</span><span class="itv-type">support</span></div><span class="itv-def">Bạn cần tôi hỗ trợ gì?</span><span class="itv-ex">I want to help you get this done — what do you need from me?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Is there anything I'm missing?</span><span class="itv-type">check-in</span></div><span class="itv-def">Tôi có bỏ sót gì không?</span><span class="itv-ex">That's my summary of the situation — is there anything I'm missing?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Can I ask a quick question?</span><span class="itv-type">permission</span></div><span class="itv-def">Cho tôi hỏi nhanh một câu nhé?</span><span class="itv-ex">Can I ask a quick question before we move on?</span></div>
-</div></div>
-
-<div class="vcollapse">
-<button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Đồng ý, phản bác &amp; thương lượng <span class="vc-count">10 câu</span></button>
-<div class="itvgrid vchidden">
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Absolutely, and on top of that...</span><span class="itv-type">agree + add</span></div><span class="itv-def">Đúng vậy, và thêm vào đó...</span><span class="itv-ex">Absolutely, and on top of that, we should document the process.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I hear you, but...</span><span class="itv-type">soft pushback</span></div><span class="itv-def">Tôi hiểu ý bạn, nhưng...</span><span class="itv-ex">I hear you, but I'm not sure that timeline is realistic.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">That's a fair point.</span><span class="itv-type">acknowledge</span></div><span class="itv-def">Đó là điểm hợp lý</span><span class="itv-ex">That's a fair point — let me reconsider the approach.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I'm not sure I agree with that.</span><span class="itv-type">disagree polite</span></div><span class="itv-def">Tôi không chắc tôi đồng ý với điều đó</span><span class="itv-ex">I'm not sure I agree with that — could we look at the data first?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Could we find a middle ground?</span><span class="itv-type">negotiate</span></div><span class="itv-def">Chúng ta có thể tìm điểm chung không?</span><span class="itv-ex">Both options have pros and cons — could we find a middle ground?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I'd push back a little on that.</span><span class="itv-type">pushback</span></div><span class="itv-def">Tôi muốn phản biện nhẹ điều đó</span><span class="itv-ex">I'd push back a little on that — the numbers don't quite support it.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let's table that for now.</span><span class="itv-type">defer</span></div><span class="itv-def">Hãy tạm gác vấn đề đó lại</span><span class="itv-ex">Good point — let's table that for now and come back to it.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">What if we...</span><span class="itv-type">suggest</span></div><span class="itv-def">Điều gì xảy ra nếu chúng ta...</span><span class="itv-ex">What if we split the work between two teams to save time?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I think we can work with that.</span><span class="itv-type">agree</span></div><span class="itv-def">Tôi nghĩ chúng ta có thể chấp nhận điều đó</span><span class="itv-ex">It's not perfect, but I think we can work with that for now.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let's agree to disagree.</span><span class="itv-type">resolve</span></div><span class="itv-def">Hãy chấp nhận rằng chúng ta có quan điểm khác nhau</span><span class="itv-ex">We've been going back and forth — let's agree to disagree and move on.</span></div>
-</div></div>
-
-<div class="vcollapse">
-<button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Trình bày &amp; thuyết trình <span class="vc-count">10 câu</span></button>
-<div class="itvgrid vchidden">
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Today I'd like to cover three things.</span><span class="itv-type">structure</span></div><span class="itv-def">Hôm nay tôi muốn đề cập 3 điểm</span><span class="itv-ex">Today I'd like to cover three things: the problem, the solution, and next steps.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let me start with the big picture.</span><span class="itv-type">structure</span></div><span class="itv-def">Hãy để tôi bắt đầu với bức tranh tổng thể</span><span class="itv-ex">Let me start with the big picture before we get into the details.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Moving on to...</span><span class="itv-type">transition</span></div><span class="itv-def">Chuyển sang...</span><span class="itv-ex">Moving on to the second point — the budget allocation.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">To give you some context...</span><span class="itv-type">background</span></div><span class="itv-def">Để cung cấp bối cảnh cho bạn...</span><span class="itv-ex">To give you some context, this issue has been ongoing for two months.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Here's what the data shows.</span><span class="itv-type">evidence</span></div><span class="itv-def">Đây là điều dữ liệu cho thấy</span><span class="itv-ex">Here's what the data shows — a 20% drop in user engagement last month.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let me break that down.</span><span class="itv-type">clarify</span></div><span class="itv-def">Để tôi phân tích rõ hơn</span><span class="itv-ex">That sounds complicated — let me break that down into three parts.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">The key takeaway here is...</span><span class="itv-type">summary</span></div><span class="itv-def">Điều quan trọng cần rút ra ở đây là...</span><span class="itv-ex">The key takeaway here is that speed matters more than features right now.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">To summarize what I've covered...</span><span class="itv-type">closing</span></div><span class="itv-def">Tóm tắt những gì tôi đã trình bày...</span><span class="itv-ex">To summarize what I've covered: problem, root cause, and proposed fix.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I'll open it up for questions.</span><span class="itv-type">closing</span></div><span class="itv-def">Tôi sẽ mở phần hỏi đáp</span><span class="itv-ex">That's everything from my side — I'll open it up for questions.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">What questions do you have?</span><span class="itv-type">closing</span></div><span class="itv-def">Bạn có câu hỏi gì không?</span><span class="itv-ex">I've covered the main points — what questions do you have?</span></div>
-</div></div>
-
-<div class="vcollapse">
-<button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Kết thúc &amp; theo dõi sau cuộc họp <span class="vc-count">10 câu</span></button>
-<div class="itvgrid vchidden">
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let me send a follow-up email.</span><span class="itv-type">follow-up</span></div><span class="itv-def">Để tôi gửi email tóm tắt sau</span><span class="itv-ex">Let me send a follow-up email with the key decisions and action items.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I'll keep you posted.</span><span class="itv-type">update</span></div><span class="itv-def">Tôi sẽ cập nhật cho bạn</span><span class="itv-ex">I'll keep you posted as things develop on my end.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let's reconnect next week.</span><span class="itv-type">follow-up</span></div><span class="itv-def">Hãy gặp lại vào tuần tới</span><span class="itv-ex">We didn't finish everything today — let's reconnect next week.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I'll reach out if anything comes up.</span><span class="itv-type">follow-up</span></div><span class="itv-def">Tôi sẽ liên hệ nếu có gì</span><span class="itv-ex">Sounds good — I'll reach out if anything comes up on my end.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Thanks for a productive session.</span><span class="itv-type">closing</span></div><span class="itv-def">Cảm ơn vì một buổi làm việc hiệu quả</span><span class="itv-ex">Thanks for a productive session — I feel a lot clearer now.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let's make sure we're aligned on next steps.</span><span class="itv-type">align</span></div><span class="itv-def">Hãy chắc chắn chúng ta thống nhất về bước tiếp theo</span><span class="itv-ex">Before we wrap up, let's make sure we're aligned on next steps.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Who's owning this?</span><span class="itv-type">assign</span></div><span class="itv-def">Ai sẽ phụ trách việc này?</span><span class="itv-ex">Great idea — who's owning this and what's the timeline?</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">I'll loop you in on the thread.</span><span class="itv-type">follow-up</span></div><span class="itv-def">Tôi sẽ thêm bạn vào cuộc hội thoại</span><span class="itv-ex">The discussion is already happening over email — I'll loop you in on the thread.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Let's put a pin in that.</span><span class="itv-type">defer</span></div><span class="itv-def">Hãy ghi chú lại và quay lại sau</span><span class="itv-ex">That's a good point but out of scope today — let's put a pin in that.</span></div>
-  <div class="itvc"><div class="itv-top"><span class="itv-word">Great discussion, everyone.</span><span class="itv-type">closing</span></div><span class="itv-def">Thảo luận hay lắm, mọi người ơi</span><span class="itv-ex">Great discussion, everyone — same time next week?</span></div>
-</div></div>
-
+<div class="slabel" style="margin-bottom:.75rem">Speaking Flow · PREP &amp; SITA Booster</div>
+<div style="overflow-x:auto;border:.5px solid #E2DDD6;border-radius:var(--border-radius-md)">
+<table style="width:100%;border-collapse:collapse;font-size:12.5px">
+<thead>
+<tr style="background:#FDF3E0">
+  <th style="padding:9px 12px;text-align:left;border-bottom:.5px solid #E2D5B0;color:#7A4F0D;font-weight:600;white-space:nowrap">Chức năng</th>
+  <th style="padding:9px 12px;text-align:left;border-bottom:.5px solid #E2D5B0;color:#7A4F0D;font-weight:600">Cụm chính</th>
+  <th style="padding:9px 12px;text-align:left;border-bottom:.5px solid #E2D5B0;color:#7A4F0D;font-weight:600">Cụm thay thế</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Mở đầu</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">To begin with</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">First of all / To start with / I'd like to start by saying that / From my perspective / Personally speaking</td></tr>
+<tr style="background:#FAFAF9"><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Chuyển ý</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">When it comes to</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">Regarding / As for / In terms of / With regard to / Speaking of</td></tr>
+<tr><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Quan điểm</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">I'd say that</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">I would argue that / I tend to think that / It seems to me that / I strongly believe that</td></tr>
+<tr style="background:#FAFAF9"><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Lý do</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">The main reason is that</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">This is mainly because / One reason is that / The reason for this is that</td></tr>
+<tr><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Thêm ý</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">Furthermore</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">Moreover / What's more / In addition / On top of that</td></tr>
+<tr style="background:#FAFAF9"><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Ví dụ</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">For example</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">For instance / To give you an example / One clear example is</td></tr>
+<tr><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Kết quả</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">As a result</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">Consequently / Therefore / This leads to / That's why</td></tr>
+<tr style="background:#FAFAF9"><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#6B7280;white-space:nowrap">Kết luận</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;font-weight:600">To sum up</td><td style="padding:8px 12px;border-bottom:.5px solid #F0EDE8;color:#374151">Overall / In conclusion / To wrap things up / Ultimately</td></tr>
+<tr><td style="padding:8px 12px;color:#6B7280;white-space:nowrap">Tương lai</td><td style="padding:8px 12px;font-weight:600">Looking ahead</td><td style="padding:8px 12px;color:#374151">In the near future / Moving forward / In the coming years / It's likely that</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
 <div style="margin-top:1.5rem">
-<div class="slabel" style="margin-bottom:.75rem"> Từ vựng </div>
+<div class="slabel" style="margin-bottom:.5rem">Idea Development — when you run out of things to say</div>
+<div style="font-size:12.5px;color:#6B7280;margin-bottom:.85rem;line-height:1.6">Sau khi nêu quan điểm, dùng các cách dưới để tìm thêm luận điểm hoặc mở rộng câu trả lời.</div>
+
+<div style="margin-bottom:.65rem">
+<div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9CA3AF;margin-bottom:.5rem">Look through different lenses</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:7px">
+<div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Money</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Tiết kiệm / tốn tiền?<br>Giá trị có xứng chi phí?<br><em style="color:#9CA3AF">"It saves money because..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Time</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Nhanh hơn / tiết kiệm thời gian?<br>Giảm công sức không?<br><em style="color:#9CA3AF">"It is more efficient because..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Health</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Tốt / xấu cho sức khỏe?<br>Giảm stress? Cải thiện tâm lý?<br><em style="color:#9CA3AF">"It is better for wellbeing..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Society</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Ảnh hưởng cộng đồng / môi trường?<br>Cải thiện các mối quan hệ?<br><em style="color:#9CA3AF">"It affects society because..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Education</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Học được gì? Phát triển kỹ năng nào?<br>Mở rộng nhận thức không?<br><em style="color:#9CA3AF">"You can learn a lot from..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Career</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Cơ hội nghề nghiệp / thăng tiến?<br>Tăng năng lực cạnh tranh?<br><em style="color:#9CA3AF">"Professionally, it helps you..."</em></div></div></div></div>
+
+<div>
+<div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9CA3AF;margin-bottom:.5rem">Ways to expand your answer</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:7px">
+<div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Ý đối lập</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Nêu mặt ngược lại rồi bác bỏ hoặc thừa nhận<br>Cho thấy bạn nhìn nhận đa chiều<br><em style="color:#9CA3AF">"On the other hand... but..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Ví dụ cụ thể</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Đưa số liệu, sự kiện, câu chuyện thực<br>Cụ thể hóa luận điểm trừu tượng<br><em style="color:#9CA3AF">"For example, in my experience..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Cá nhân hóa</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Gắn với trải nghiệm bản thân<br>Làm câu trả lời trở nên thật hơn<br><em style="color:#9CA3AF">"Personally, I have noticed..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Nguyên nhân sâu</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Hỏi: tại sao điều đó xảy ra?<br>Đào sâu hơn một lớp so với câu trả lời đầu<br><em style="color:#9CA3AF">"The reason behind this is..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Phạm vi rộng hơn</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Mở rộng ra xã hội, thế giới, tương lai<br>Tạo tầm nhìn vĩ mô<br><em style="color:#9CA3AF">"More broadly, this affects..."</em></div></div><div style="background:#fff;border:.5px solid #E8E4DD;border-radius:10px;padding:.85rem 1rem"><div style="font-size:13px;font-weight:700;color:#1C2130;margin-bottom:5px">Phản biện trước</div><div style="font-size:12px;color:#6B7280;line-height:1.75">Tự đặt câu hỏi phản biện rồi trả lời<br>Ngăn người nghe phản bác<br><em style="color:#9CA3AF">"Some might argue... however..."</em></div></div></div></div>
+
+<div style="margin-top:.85rem;background:#F0F4FF;border:.5px solid #C7D2F8;border-radius:10px;padding:.9rem 1rem;font-size:12.5px;line-height:1.85;color:#374151">
+<strong style="color:#1C2130">Ví dụ — Q: Should people work remotely?</strong><br>
+<strong>P:</strong> I think remote work is beneficial for most employees.<br>
+<strong>R (Time):</strong> It saves commuting time and increases focus.<br>
+<strong>R (Health):</strong> It reduces stress and improves work-life balance.<br>
+<strong>R (ý đối lập):</strong> Some argue it reduces collaboration — but video calls and async tools largely solve that.<br>
+<strong>E:</strong> For example, I save nearly two hours every day by not commuting.<br>
+<strong>P:</strong> That is why I believe remote work genuinely improves quality of life.
+</div>
+</div><div style="margin-top:1.5rem">
+<div class="slabel" style="margin-bottom:.75rem">Vocabulary by Topic</div>
+<div style="background:#fff8db;border:1px solid #f0d36a;padding:12px;border-radius:10px;margin-bottom:10px">
+<b>Gợi ý bổ sung:</b> Với mỗi tuần trong phần Schedule, hãy thêm mục <i>Key Vocabulary & Meaning</i>
+(gồm từ vựng, nghĩa tiếng Việt và ví dụ). Theme màu đã được đổi sang xanh nhạt + vàng.
+</div>
+
 <div style="display:flex;flex-direction:column;gap:6px">
 <div class="vc-group">
-<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Phrases &amp; Communication (1–6 + IT 7–10)</span><span><span class="vc-g-count">10 topics</span> <span class="vc-g-arrow">▶</span></span></button>
+<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Topic 1 — 10</span><span><span class="vc-g-count">10 topics</span> <span class="vc-g-arrow">▶</span></span></button>
 <div class="vc-group-inner">
 <div class="vcollapse">
 <button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Mở đầu cuộc trò chuyện <span class="vc-count">10 câu</span></button>
@@ -437,7 +427,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 </div>
 </div>
 <div class="vc-group">
-<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Everyday Topics (11–20)</span><span><span class="vc-g-count">10 topics</span> <span class="vc-g-arrow">▶</span></span></button>
+<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Topic 11 — 20</span><span><span class="vc-g-count">10 topics</span> <span class="vc-g-arrow">▶</span></span></button>
 <div class="vc-group-inner">
 <div class="vcollapse"><button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Work &amp; Office<span class="vc-count">12 từ</span></button><div class="itvgrid vchidden"><div class="itvc"><div class="itv-top"><span class="itv-word">deadline</span><span class="itv-type">n.</span></div><span class="itv-def">hạn chót hoàn thành</span><span class="itv-ex">The deadline for this feature is end of week.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">workload</span><span class="itv-type">n.</span></div><span class="itv-def">khối lượng công việc</span><span class="itv-ex">My workload has been really heavy this month.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">delegate</span><span class="itv-type">v.</span></div><span class="itv-def">giao việc cho người khác</span><span class="itv-ex">I'll delegate the testing tasks to the junior devs.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">follow up</span><span class="itv-type">v.</span></div><span class="itv-def">theo dõi / nhắc lại</span><span class="itv-ex">I'll follow up with the client tomorrow.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">wrap up</span><span class="itv-type">v.</span></div><span class="itv-def">kết thúc, tổng kết</span><span class="itv-ex">Let's wrap up — we're running over time.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">heads-up</span><span class="itv-type">n.</span></div><span class="itv-def">thông báo trước cho ai đó</span><span class="itv-ex">Just wanted to give you a heads-up about the maintenance.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">sign off</span><span class="itv-type">v.</span></div><span class="itv-def">phê duyệt / kết thúc ngày làm</span><span class="itv-ex">Can you sign off on this design before I start coding?</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">loop in</span><span class="itv-type">v.</span></div><span class="itv-def">đưa thêm người vào cuộc hội thoại</span><span class="itv-ex">Loop in the QA team once the feature is ready.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">get the ball rolling</span><span class="itv-type">phrase</span></div><span class="itv-def">bắt đầu khởi động</span><span class="itv-ex">Let's get the ball rolling on the new project.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">on the same page</span><span class="itv-type">phrase</span></div><span class="itv-def">cùng hiểu như nhau</span><span class="itv-ex">I want to make sure we're on the same page.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">touch base</span><span class="itv-type">v.</span></div><span class="itv-def">liên lạc nhanh để cập nhật</span><span class="itv-ex">Let's touch base after the meeting to align.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">put on hold</span><span class="itv-type">v.</span></div><span class="itv-def">tạm dừng, hoãn lại</span><span class="itv-ex">That feature has been put on hold until next quarter.</span></div></div></div>
 <div class="vcollapse"><button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Communication &amp; Meetings<span class="vc-count">12 từ</span></button><div class="itvgrid vchidden"><div class="itvc"><div class="itv-top"><span class="itv-word">agenda</span><span class="itv-type">n.</span></div><span class="itv-def">chương trình cuộc họp</span><span class="itv-ex">Can you share the agenda before the meeting?</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">minutes</span><span class="itv-type">n.</span></div><span class="itv-def">biên bản cuộc họp</span><span class="itv-ex">I'll take minutes and share them after the call.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">action item</span><span class="itv-type">n.</span></div><span class="itv-def">việc cần làm sau cuộc họp</span><span class="itv-ex">The action item from today is to review the API docs.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">take offline</span><span class="itv-type">phrase</span></div><span class="itv-def">bàn riêng sau, không họp chung</span><span class="itv-ex">Let's take this offline — it's a separate discussion.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">circle back</span><span class="itv-type">v.</span></div><span class="itv-def">quay lại chủ đề sau</span><span class="itv-ex">Let's circle back on this after we have more info.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">piggyback</span><span class="itv-type">v.</span></div><span class="itv-def">nối tiếp ý của người trước</span><span class="itv-ex">I'd like to piggyback on what she just said.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">defer</span><span class="itv-type">v.</span></div><span class="itv-def">lùi lại để quyết định sau</span><span class="itv-ex">We'll defer that decision to next week's meeting.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">raise a point</span><span class="itv-type">phrase</span></div><span class="itv-def">nêu lên một vấn đề</span><span class="itv-ex">I'd like to raise a point about the timeline.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">concise</span><span class="itv-type">adj.</span></div><span class="itv-def">ngắn gọn, súc tích</span><span class="itv-ex">Please keep your update concise — we have 5 minutes.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">elaborate</span><span class="itv-type">v.</span></div><span class="itv-def">giải thích thêm, nói rõ hơn</span><span class="itv-ex">Could you elaborate on what you mean by that?</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">clarify</span><span class="itv-type">v.</span></div><span class="itv-def">làm rõ điều chưa hiểu</span><span class="itv-ex">Let me clarify what I meant by the deadline.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">recap</span><span class="itv-type">v.</span></div><span class="itv-def">tóm tắt lại nội dung</span><span class="itv-ex">Let me quickly recap what we decided today.</span></div></div></div>
@@ -452,7 +442,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 </div>
 </div>
 <div class="vc-group">
-<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Professional Topics (21–30)</span><span><span class="vc-g-count">10 topics</span> <span class="vc-g-arrow">▶</span></span></button>
+<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Topic 21 — 30</span><span><span class="vc-g-count">10 topics</span> <span class="vc-g-arrow">▶</span></span></button>
 <div class="vc-group-inner">
 <div class="vcollapse"><button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Technology (General)<span class="vc-count">12 từ</span></button><div class="itvgrid vchidden"><div class="itvc"><div class="itv-top"><span class="itv-word">update</span><span class="itv-type">v.</span></div><span class="itv-def">cập nhật phần mềm/thông tin</span><span class="itv-ex">Please update your app to the latest version.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">interface</span><span class="itv-type">n.</span></div><span class="itv-def">giao diện người dùng</span><span class="itv-ex">The interface is clean and easy to use.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">automate</span><span class="itv-type">v.</span></div><span class="itv-def">tự động hóa quy trình</span><span class="itv-ex">We automated the reporting process to save time.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">integration</span><span class="itv-type">n.</span></div><span class="itv-def">tích hợp các hệ thống với nhau</span><span class="itv-ex">The Slack integration makes notifications much easier.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">glitch</span><span class="itv-type">n.</span></div><span class="itv-def">lỗi nhỏ bất ngờ</span><span class="itv-ex">There's a small glitch in the checkout flow.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">lag</span><span class="itv-type">n.</span></div><span class="itv-def">độ trễ, chậm phản hồi</span><span class="itv-ex">There's noticeable lag when loading large datasets.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">crash</span><span class="itv-type">v.</span></div><span class="itv-def">ứng dụng/hệ thống bị tắt đột ngột</span><span class="itv-ex">The app crashed during the demo — very embarrassing.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">sync</span><span class="itv-type">v.</span></div><span class="itv-def">đồng bộ hóa dữ liệu</span><span class="itv-ex">The data doesn't sync in real time yet.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">backup</span><span class="itv-type">n.</span></div><span class="itv-def">bản sao lưu dữ liệu</span><span class="itv-ex">Always keep a backup of your work.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">seamless</span><span class="itv-type">adj.</span></div><span class="itv-def">liền mạch, không bị gián đoạn</span><span class="itv-ex">The new onboarding flow feels seamless.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">workaround</span><span class="itv-type">n.</span></div><span class="itv-def">cách xử lý tạm thời</span><span class="itv-ex">We have a workaround for now, but it's not ideal.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">disruptive</span><span class="itv-type">adj.</span></div><span class="itv-def">đột phá, làm thay đổi ngành</span><span class="itv-ex">AI is one of the most disruptive technologies of our time.</span></div></div></div>
 <div class="vcollapse"><button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Environment &amp; Sustainability<span class="vc-count">12 từ</span></button><div class="itvgrid vchidden"><div class="itvc"><div class="itv-top"><span class="itv-word">sustainable</span><span class="itv-type">adj.</span></div><span class="itv-def">bền vững về môi trường</span><span class="itv-ex">We're looking for more sustainable packaging solutions.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">carbon footprint</span><span class="itv-type">n.</span></div><span class="itv-def">lượng khí thải carbon cá nhân</span><span class="itv-ex">Flying less is one way to reduce your carbon footprint.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">renewable energy</span><span class="itv-type">n.</span></div><span class="itv-def">năng lượng tái tạo</span><span class="itv-ex">The office runs entirely on renewable energy.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">recycle</span><span class="itv-type">v.</span></div><span class="itv-def">tái chế rác thải</span><span class="itv-ex">Do you recycle at home?</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">eco-friendly</span><span class="itv-type">adj.</span></div><span class="itv-def">thân thiện với môi trường</span><span class="itv-ex">We switched to eco-friendly office supplies.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">conscious consumer</span><span class="itv-type">n.</span></div><span class="itv-def">người tiêu dùng có ý thức</span><span class="itv-ex">Being a conscious consumer means thinking before you buy.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">emissions</span><span class="itv-type">n.</span></div><span class="itv-def">khí thải gây ô nhiễm</span><span class="itv-ex">The company pledged to cut emissions by 50% by 2030.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">green space</span><span class="itv-type">n.</span></div><span class="itv-def">không gian xanh trong đô thị</span><span class="itv-ex">Cities need more green space for mental health.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">single-use</span><span class="itv-type">adj.</span></div><span class="itv-def">dùng một lần rồi bỏ</span><span class="itv-ex">We've stopped using single-use plastics in the office.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">biodegradable</span><span class="itv-type">adj.</span></div><span class="itv-def">phân hủy tự nhiên được</span><span class="itv-ex">We use biodegradable packaging for all shipments.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">net zero</span><span class="itv-type">n.</span></div><span class="itv-def">trung hòa carbon</span><span class="itv-ex">Our target is to reach net zero by 2040.</span></div><div class="itvc"><div class="itv-top"><span class="itv-word">upcycle</span><span class="itv-type">v.</span></div><span class="itv-def">tái sử dụng sáng tạo đồ cũ</span><span class="itv-ex">She upcycled old T-shirts into a reusable bag.</span></div></div></div>
@@ -488,7 +478,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 </div>
 </div>
 <div class="vc-group">
-<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Advanced Topics (31–38)</span><span><span class="vc-g-count">8 topics</span> <span class="vc-g-arrow">▶</span></span></button>
+<button class="vc-group-btn" onclick="toggleVCGroup(this)"><span>Topic 31 — 38</span><span><span class="vc-g-count">8 topics</span> <span class="vc-g-arrow">▶</span></span></button>
 <div class="vc-group-inner">
 <div class="vcollapse">
 <button class="vctoggle" onclick="toggleVC(this)"><span class="vc-arrow">▶</span>Emotions &amp; Social Intelligence <span class="vc-count">10 từ</span></button>
@@ -529,7 +519,70 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 </div>
 </div>
 
-<div class="main-panel" id="mp2"><!-- 4-WEEK PLAN -->
+<div class="main-panel"
+
+<!-- PHÁT TRIỂN Ý -->
+  <div style="background:#E6F5EE;border:.5px solid #A8D9BC;border-radius:var(--border-radius-md);padding:.85rem 1rem;margin-top:.65rem">
+    <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#1D6F4B;margin-bottom:.55rem">Phát triển ý — Khi không biết nói gì thêm</div>
+    <div style="font-size:12.5px;color:var(--color-text-secondary);line-height:1.75;margin-bottom:.75rem">
+      Khi đã nêu ý kiến, hãy thử mở rộng bằng cách trả lời thêm các câu hỏi sau:
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">📌 Cụ thể hóa</strong><br>
+        Ví dụ, bằng chứng, con số<br>
+        <em style="color:#374151">"For example, in my experience..."</em>
+      </div>
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">🔁 Nguyên nhân</strong><br>
+        Tại sao điều đó xảy ra?<br>
+        <em style="color:#374151">"This is mainly because..."</em>
+      </div>
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">⚖️ So sánh / Tương phản</strong><br>
+        Mặt tốt và mặt chưa tốt<br>
+        <em style="color:#374151">"On the other hand..."</em>
+      </div>
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">🧍 Cá nhân hóa</strong><br>
+        Trải nghiệm của bản thân<br>
+        <em style="color:#374151">"Personally, I've noticed that..."</em>
+      </div>
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">🌍 Mở rộng phạm vi</strong><br>
+        Áp dụng cho xã hội / thế giới<br>
+        <em style="color:#374151">"More broadly, this affects..."</em>
+      </div>
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">🔮 Tương lai</strong><br>
+        Điều này sẽ dẫn đến đâu?<br>
+        <em style="color:#374151">"Looking ahead, I think..."</em>
+      </div>
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">❓ Phản biện trước</strong><br>
+        Tự phản bác và trả lời lại<br>
+        <em style="color:#374151">"Some people might argue... but..."</em>
+      </div>
+
+      <div style="background:var(--color-background-primary);border:.5px solid #A8D9BC;border-radius:5px;padding:7px 10px;font-size:12px;line-height:1.65">
+        <strong style="color:#1D6F4B">🎯 Tóm lại</strong><br>
+        Kéo về câu hỏi ban đầu<br>
+        <em style="color:#374151">"So, going back to your question..."</em>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="main-panel" id="mp2">
+    <!-- 4-WEEK PLAN -->
 <div class="sec" style="border-bottom:none;padding-bottom:2.5rem">
   <div class="slabel">4-Week Schedule</div>
   <div class="wtabs">
@@ -608,7 +661,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
     <div class="qi-ans">My ideal setup would be <span class="hl">a hybrid model — 3 days in the office, 2 days remote.</span> The office days would be for team meetings and collaborative work, while the remote days would be dedicated to deep, focused tasks. I'd also want a quiet dedicated workspace at home, not just a corner of the bedroom.</div>
   </div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">flexibility</div><div class="vc">commute</div><div class="vc">collaboration</div><div class="vc">productivity</div><div class="vc">burnout</div><div class="vc">set boundaries</div><div class="vc">sync up</div><div class="vc">async</div></div>
         </div>
         <div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic B · Hobbies &amp; Stress relief</div>
@@ -638,7 +691,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
     <div class="qi-ans">I'd probably recommend <span class="hl">walking or any light outdoor activity.</span> It requires no equipment, no skill, no planning — you just go. Studies show even 15 minutes outside can significantly reduce cortisol levels. And unlike the gym, it doesn't feel like another obligation to fit into your schedule.</div>
   </div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">unwind</div><div class="vc">decompress</div><div class="vc">pastime</div><div class="vc">recharge</div><div class="vc">outlet</div><div class="vc">downtime</div><div class="vc">pursue</div><div class="vc">mindfulness</div></div>
         </div>
       </div>
@@ -679,7 +732,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's something you feel you should learn but keep putting off?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Honestly, <span class="hl">public speaking.</span> I know it would help my career — presenting to leadership, running training sessions — but I keep finding reasons to delay it. I think the real reason is that I'm uncomfortable being put on the spot. It's on my list for this quarter, though.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Do you think learning English has changed how you think or communicate?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I think it has, more than I expected. <span class="hl">Having a second language gives you a different lens.</span> I've noticed I'm more precise when I communicate in English because I can't rely on filler phrases I'd use in Vietnamese. It's made me more deliberate with my words in general.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">upskill</div><div class="vc">retain</div><div class="vc">trial and error</div><div class="vc">hands-on</div><div class="vc">comfort zone</div><div class="vc">absorb</div><div class="vc">pick up</div><div class="vc">feedback loop</div></div>
         </div>
         <div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic D · Social media &amp; screen time</div>
@@ -691,7 +744,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Do you follow any accounts that inspire you professionally?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Yes — I follow a few <span class="hl">industry practitioners on LinkedIn</span> who share real, unglamorous behind-the-scenes content about their work. Not highlight reels, but actual lessons from failures. That kind of content is more useful than polished success stories.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you feel when you spend too much time on your phone?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Mentally <span class="hl">drained and slightly irritable, to be honest.</span> There's something about passive scrolling that feels like work for your brain without actually producing anything. After a long doom-scrolling session I usually feel worse than before I started — which is a good reminder to put the phone down.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">doom-scroll</div><div class="vc">algorithm</div><div class="vc">curate</div><div class="vc">detox</div><div class="vc">engagement</div><div class="vc">filter bubble</div><div class="vc">mindless</div><div class="vc">disconnect</div></div>
         </div>
       </div>
@@ -709,7 +762,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Do you think diet affects your energy and productivity?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Absolutely — and I've experienced this firsthand. <span class="hl">Heavy, carb-dense lunches</span> consistently make me sluggish by 2 PM, while lighter meals with protein keep me more alert. It's not about strict dieting; it's just about noticing patterns between what I eat and how I feel three hours later.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's your go-to comfort food after a long day?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">For me, it's <span class="hl">a bowl of instant pho with extra herbs.</span> It's warm, familiar, and requires zero effort to make. There's something about the smell and the ritual of it that signals to my brain that the workday is officially over. It's less about the food itself and more about the feeling it brings.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">fuel up</div><div class="vc">nutritious</div><div class="vc">meal prep</div><div class="vc">cravings</div><div class="vc">portion</div><div class="vc">consistent</div><div class="vc">skip</div><div class="vc">energized</div></div>
         </div>
         <div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic F · Travel &amp; dream destinations</div>
@@ -721,7 +774,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Has travel ever changed your perspective on something?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Yes. Visiting a small rural village in <span class="hl">Northern Vietnam</span> changed how I thought about productivity. People there worked hard but without the constant urgency I was used to. Watching that made me realize how much anxiety I was carrying at work that wasn't actually necessary. It sounds cliché, but it genuinely shifted something.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's one place in Vietnam you think more people should visit?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans"><span class="hl">Mù Cang Chải</span> — especially in September during harvest season. Most tourists only know Hạ Long and Hội An, but the terraced rice fields there are extraordinary. It's remote, which keeps it quiet, and the landscapes feel almost unreal. I think it rivals anything I've seen in photos from other countries.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">itinerary</div><div class="vc">spontaneous</div><div class="vc">immerse</div><div class="vc">off the beaten path</div><div class="vc">jet lag</div><div class="vc">wanderlust</div><div class="vc">budget</div><div class="vc">culture shock</div></div>
         </div>
       </div>
@@ -762,7 +815,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you prefer to receive feedback — direct or gentle?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I prefer <span class="hl">direct and specific.</span> Vague positive feedback doesn't help me grow. Tell me exactly what went wrong and what better looks like. The tone matters less to me than the specificity. What I find unhelpful is feedback that's softened to the point where the actual message gets lost.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's one team habit you think every tech team should adopt?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans"><span class="hl">Written async updates before meetings.</span> If everyone shares a brief status update the night before a sync, the meeting itself becomes shorter and more focused — you spend time on decisions, not status reporting. It sounds small but it transforms how efficiently a team uses its collective time.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">morale</div><div class="vc">accountability</div><div class="vc">transparency</div><div class="vc">hierarchy</div><div class="vc">ownership</div><div class="vc">friction</div><div class="vc">empower</div><div class="vc">align</div></div>
         </div>
         <div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic H · Movies, shows &amp; entertainment</div>
@@ -774,7 +827,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Do you think streaming services have changed how we socialize?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Definitely — in both directions. <span class="hl">On one hand,</span> shared watching experiences have almost disappeared — we're all on different seasons of different shows. On the other hand, it's generated a whole new form of conversation around 'have you seen...?' I think it's changed socializing more than it's reduced it.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Is there a movie or show you'd recommend to your whole team?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I'd recommend <span class="hl">The Bear</span> — a show about a professional kitchen that's secretly one of the most accurate portrayals of professional pressure and team dysfunction I've ever seen. Every episode feels like a sprint. I've had colleagues say it made them rethink how they run meetings. It's intense but worth it.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">binge-watch</div><div class="vc">plot twist</div><div class="vc">cliffhanger</div><div class="vc">underrated</div><div class="vc">genre</div><div class="vc">subtitles</div><div class="vc">hooked</div><div class="vc">recommend</div></div>
         </div>
       </div>
@@ -792,7 +845,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What does success mean to you — in work and in life?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">In work, success to me is <span class="hl">having real impact without sacrificing the people around me.</span> Not just hitting metrics, but contributing to something I'm proud of and growing alongside a good team. In life, it's having enough autonomy and enough time for the things that actually matter to me outside of a job title.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you celebrate when you achieve something?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Honestly, I'm not very good at this. I tend to <span class="hl">move straight to the next thing.</span> I've been trying to change that — even small wins deserve a pause. My version of celebrating is usually telling one person I care about what I accomplished, or treating myself to a meal I'd normally consider too indulgent.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">milestone</div><div class="vc">discipline</div><div class="vc">procrastinate</div><div class="vc">visualize</div><div class="vc">consistency</div><div class="vc">setback</div><div class="vc">mindset</div><div class="vc">accountability</div></div>
         </div>
         <div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic J · Technology &amp; daily life</div>
@@ -804,7 +857,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's a technology trend that excites you the most?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">AI productivity tools genuinely excite me. <span class="hl">Not because they replace workers</span> — they don't — but because they reduce the friction of getting started on a problem. The time I used to spend looking up syntax is now spent thinking about architecture. It's shifted where the cognitive effort goes, and that feels meaningful.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">If you could uninvent one piece of technology, what would it be?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Autoplay. <span class="hl">It's a small feature with enormous consequences.</span> It's specifically designed to remove the moment of decision between episodes, between videos, between articles. That one deliberate choice — 'should I watch another?' — is where self-regulation lives. Removing it has quietly reshaped how we consume content.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">integrate</div><div class="vc">dependency</div><div class="vc">automate</div><div class="vc">overload</div><div class="vc">seamless</div><div class="vc">gadget</div><div class="vc">upgrade</div><div class="vc">digital detox</div></div>
         </div>
       </div>
@@ -845,7 +898,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Do you think technical expertise or people skills matter more for a team leader?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I think you need <span class="hl">enough technical depth to be credible, but soft skills to be effective.</span> A tech lead who can't code loses the team's respect quickly. But one who can code brilliantly but can't communicate, facilitate conflict, or grow people becomes a bottleneck. The technical floor is necessary; the soft skills determine the ceiling.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Would you ever want to become a manager? Why or why not?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I've thought about this a lot. I'd want to, <span class="hl">but only when I feel genuinely ready to invest in other people's growth</span> rather than just being promoted to reduce churn. Management done well is a completely different job than being a senior IC. I'd rather delay it and do it right than rush into it for the title.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">delegate</div><div class="vc">empower</div><div class="vc">micromanage</div><div class="vc">vision</div><div class="vc">constructive</div><div class="vc">initiative</div><div class="vc">inspire</div><div class="vc">hands-off</div></div>
         </div>
         <div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic L · City life &amp; environment</div>
@@ -857,7 +910,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Would you ever move to a smaller city or the countryside? Why?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Possibly, <span class="hl">later in life.</span> Right now I need the density of a city — the networking, the opportunities, the stimulus. But I can imagine a version of my life in my 40s where slower, quieter, and greener starts to matter more. I don't romanticize it though — rural life has real trade-offs.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you think cities will change in the next 20 years?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I think the biggest changes will be <span class="hl">driven by climate and remote work.</span> Cities will have to redesign around heat and flooding. At the same time, as more jobs go remote, we might see a shift away from mega-cities toward mid-sized cities that offer livability without the cost and congestion. That could be a genuinely positive change.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">sustainable</div><div class="vc">carbon footprint</div><div class="vc">infrastructure</div><div class="vc">livable</div><div class="vc">green space</div><div class="vc">urban sprawl</div><div class="vc">conscious</div><div class="vc">commute</div></div>
         </div>
       </div>
@@ -875,7 +928,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Have you ever regretted a big purchase? What was it?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Yes — a <span class="hl">gym membership I never used.</span> I signed a 12-month contract in a moment of motivation and went about four times. The real lesson wasn't about the money but about how poorly I know my own habits when I'm optimistic. Now I try things for free or short-term before committing.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's one financial habit you wish you had started earlier?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans"><span class="hl">Automating savings.</span> The moment I set up an automatic transfer on payday — before I could 'decide' to spend it — everything became easier. Willpower is unreliable. Systems that remove the decision entirely are far more effective. I wish I'd understood that at 22 instead of 27.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">budget</div><div class="vc">invest</div><div class="vc">impulse buy</div><div class="vc">savings</div><div class="vc">splurge</div><div class="vc">financial goals</div><div class="vc">expense</div><div class="vc">worth it</div></div>
         </div>
         <div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic N · Future of work &amp; career paths</div>
@@ -887,7 +940,7 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Do you think AI will replace jobs in your field? How do you feel about that?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I think AI will <span class="hl">reshape, not replace</span> most technical roles — at least for now. The jobs most at risk are those focused on executing defined, repetitive tasks. The ones that remain irreplaceable involve judgment, context, and communication — which are exactly the areas that are hardest to automate. My honest feeling is cautious optimism.</div></div>
 <div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What career advice would you give to someone just starting in tech?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">First of all, <span class="hl">invest in your communication skills as much as your technical ones.</span> Second, don't wait until you feel 'ready' to take on harder problems — readiness comes from doing, not from preparing to do. And most importantly, build relationships before you need them. Your network is the compound interest of your career.</div></div>
 </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">pivot</div><div class="vc">upskill</div><div class="vc">freelance</div><div class="vc">disruption</div><div class="vc">portfolio</div><div class="vc">network</div><div class="vc">burnout</div><div class="vc">remote-first</div></div>
         </div>
       </div>
@@ -946,13 +999,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">I remind myself that <span class="hl">setbacks are rarely as permanent as they feel in the moment.</span> I give myself 24 hours to process it, then I focus on the one next action I can take. Progress, even small progress, restores momentum faster than reflection alone.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">setback</div><div class="vc">resilience</div><div class="vc">accountability</div><div class="vc">retrospective</div><div class="vc">assumption</div><div class="vc">iterate</div><div class="vc">debrief</div><div class="vc">pivot</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a challenge you overcame</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a challenge you overcame</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: a difficult challenge or setback you faced professionally or personally</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the challenge was and when it happened</div><div class="dq-p">• Why it was difficult for you</div><div class="dq-p">• What steps you took to overcome it</div><div class="dq-p">• What you learned and how it changed you</div></div>
@@ -1005,13 +1058,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">Yes — moving our documentation from Word files to a <span class="hl">centralized wiki system.</span> I thought it would slow us down. It took two weeks to set up and felt clunky at first. Six months later it was the single most impactful improvement we’d made to how the team shares knowledge.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">adapt</div><div class="vc">resilient</div><div class="vc">transition</div><div class="vc">embrace</div><div class="vc">ambiguity</div><div class="vc">agile</div><div class="vc">resistance</div><div class="vc">pivot</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a major change in your life</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a major change in your life</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: a significant change you experienced at work or in your personal life</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the change was and when it happened</div><div class="dq-p">• How you felt about it at the time</div><div class="dq-p">• How you adapted and what challenges you faced</div><div class="dq-p">• How it affected you in the long term</div></div>
@@ -1086,13 +1139,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">Our team was spending hours each week manually tracking status updates. I suggested we <span class="hl">add a single ‘status’ column to our existing spreadsheet</span> with a dropdown. It took 10 minutes to set up and saved roughly 2 hours per week per person. Complexity isn’t always a sign of thoroughness.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">lateral thinking</div><div class="vc">brainstorm</div><div class="vc">reframe</div><div class="vc">constraint</div><div class="vc">prototype</div><div class="vc">insight</div><div class="vc">iterate</div><div class="vc">analogy</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a creative solution you found</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a creative solution you found</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: a time you found an innovative or unexpected solution to a problem</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the problem was and why it was difficult</div><div class="dq-p">• What solutions had been tried before</div><div class="dq-p">• How you came up with your approach</div><div class="dq-p">• What the outcome was and what you learned</div></div>
@@ -1145,13 +1198,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">Start by <span class="hl">saying yes less often to less important things</span> — it’s easier to practice boundary-setting in low-stakes situations. Also, ‘no’ lands better when it comes with an explanation: ‘I can’t take this on right now without dropping X — which would you prefer I prioritize?’ That reframes it as resource management, not refusal.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">burnout</div><div class="vc">boundary</div><div class="vc">workload</div><div class="vc">overwhelm</div><div class="vc">decompress</div><div class="vc">prioritize</div><div class="vc">capacity</div><div class="vc">sustainable</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a stressful situation you handled well</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a stressful situation you handled well</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: a time when you were under significant pressure and managed to stay calm and effective</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the situation was and why it was stressful</div><div class="dq-p">• How you felt and what your initial reaction was</div><div class="dq-p">• What specific strategies you used to cope</div><div class="dq-p">• What the outcome was and what you would do the same or differently</div></div>
@@ -1227,13 +1280,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">Start with <span class="hl">the people you already know and genuinely like.</span> Networking doesn’t have to be strangers at events. The people you’ve worked with, studied with, or respected from a distance are your real network. Invest in those relationships first before expanding outward.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">network</div><div class="vc">referral</div><div class="vc">mentor</div><div class="vc">rapport</div><div class="vc">visibility</div><div class="vc">leverage</div><div class="vc">outreach</div><div class="vc">community</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a person who influenced your career</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a person who influenced your career</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: someone who had a significant positive impact on your professional development</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• Who the person is and how you met them</div><div class="dq-p">• What made them stand out or different from others</div><div class="dq-p">• How they specifically influenced or helped you</div><div class="dq-p">• How their influence has stayed with you</div></div>
@@ -1286,13 +1339,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">More than diversity programs, what matters is <span class="hl">creating conditions where different perspectives are actually heard and acted on.</span> Diversity without inclusion is just having people from different backgrounds in the same room while still listening to the same voices.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">cultural sensitivity</div><div class="vc">inclusive</div><div class="vc">stereotype</div><div class="vc">hierarchy</div><div class="vc">implicit</div><div class="vc">nuance</div><div class="vc">bridge</div><div class="vc">context</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a cultural experience that surprised you</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a cultural experience that surprised you</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: an experience with a different culture that challenged or changed your perspective</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the experience was and where it happened</div><div class="dq-p">• What surprised or confused you at first</div><div class="dq-p">• How you responded or adapted</div><div class="dq-p">• What you learned and how it changed your outlook</div></div>
@@ -1368,13 +1421,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">The ability to <span class="hl">learn and unlearn quickly.</span> The specific technical skills needed will keep changing. What won’t change is the need to adapt rapidly, evaluate new tools critically, and transfer knowledge across domains. Intellectual flexibility will matter more than any single technical credential.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">automation</div><div class="vc">disruption</div><div class="vc">adoption</div><div class="vc">legacy system</div><div class="vc">scalable</div><div class="vc">iterate</div><div class="vc">ROI</div><div class="vc">upskill</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a technology that changed how you work</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a technology that changed how you work</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: a specific tool, platform, or technology that significantly changed your working habits or productivity</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the technology is and when you started using it</div><div class="dq-p">• How you worked before it existed</div><div class="dq-p">• What specifically changed and why it mattered</div><div class="dq-p">• Whether you see any downsides to relying on it</div></div>
@@ -1427,13 +1480,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">A myth, almost entirely. <span class="hl">What we call multitasking is actually rapid task switching</span> — and every switch carries a cost. The people who appear to multitask well are usually just better at managing the transitions between tasks, not genuinely parallel processing. Neuroscience is fairly clear on this.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">deep work</div><div class="vc">time-block</div><div class="vc">prioritize</div><div class="vc">output</div><div class="vc">focus</div><div class="vc">efficiency</div><div class="vc">habit</div><div class="vc">routine</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe your ideal working day</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe your ideal working day</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: what your perfect working day would look like — from start to finish</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How the day would start and what your morning routine would be</div><div class="dq-p">• What kind of work you would do and when</div><div class="dq-p">• How you would manage energy and focus throughout the day</div><div class="dq-p">• How the day would end and what you would do to recharge</div></div>
@@ -1509,13 +1562,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">Start by <span class="hl">building a system, not relying on motivation.</span> Motivation is inconsistent. A 20-minute daily habit of reading, reflection, or practice is more powerful than occasional intense periods of studying. Also: be genuinely curious rather than instrumentally curious — learn things because they interest you, not just because they’re useful.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">self-directed</div><div class="vc">curiosity</div><div class="vc">credential</div><div class="vc">competence</div><div class="vc">upskill</div><div class="vc">reskill</div><div class="vc">mastery</div><div class="vc">growth mindset</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a skill you worked hard to develop</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a skill you worked hard to develop</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: a specific skill — professional or personal — that required significant effort and persistence to acquire</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the skill is and why you decided to develop it</div><div class="dq-p">• What challenges you faced while learning it</div><div class="dq-p">• What strategies or approaches helped you the most</div><div class="dq-p">• Where you are now with this skill and what you still want to improve</div></div>
@@ -1568,13 +1621,13 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
               <div class="qi-ans">The possibility of <span class="hl">using data and AI to surface insights that were always there but invisible.</span> In my field, there’s an enormous amount of institutional knowledge trapped in documents and people’s heads. Better tools for synthesizing and surfacing that knowledge could fundamentally change how organizations make decisions.</div>
             </div>
           </div>
-          <button class="vtoggle" onclick="toggleV(this)">📋 Vocabulary</button>
+          <button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
           <div class="vlist"><div class="vc">automation</div><div class="vc">gig economy</div><div class="vc">upskill</div><div class="vc">disruption</div><div class="vc">hybrid work</div><div class="vc">workforce</div><div class="vc">adaptability</div><div class="vc">resilience</div></div>
         </div>
         <div class="tblock">
-          <div class="tlabel"><span class="tdot"></span>🎤 Topic 2 · 4-minute continuous speaking</div>
+          <div class="tlabel"><span class="tdot"></span>Topic 2 · 4-minute continuous speaking</div>
           <div class="demo-wrap">
-            <div class="demo-header"><span style="font-size:18px">📝</span><div class="demo-htitle">Cue Card: Describe a goal you are currently working toward</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+            <div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Cue Card: Describe a goal you are currently working toward</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
             <div class="demo-body">
               <div class="dslabel" style="margin-bottom:.5rem">Describe: a significant personal or professional goal you are actively pursuing right now</div>
               <div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What the goal is and why it matters to you</div><div class="dq-p">• How you got started and what progress you have made so far</div><div class="dq-p">• What obstacles or challenges you are facing</div><div class="dq-p">• What achieving this goal would mean for you</div></div>
@@ -1618,6 +1671,9 @@ body{font-family:'Inter',sans-serif;color:#1C2B3A;background:#F8F9FA}
 
 </div>
 </div>
+  </div>
+
+</div>
 <script>
 function switchTab(n,btn){
   document.querySelectorAll('.main-panel').forEach(p=>p.classList.remove('on'));
@@ -1652,7 +1708,6 @@ function toggleVCGroup(btn){
   var open  = inner.classList.toggle('open');
   btn.classList.toggle('open', open);
 }
-
 </script>
 </body>
 </html>
