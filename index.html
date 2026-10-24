@@ -112,20 +112,22 @@ body{font-family:'DM Sans',sans-serif;background:#F6F4F0;color:#1C2130;min-heigh
 .wtabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:1.25rem;padding-top:1.25rem}
 @media (max-width:640px){.wtabs{grid-template-columns:repeat(3,1fr)}}
 .wgroups{display:flex;flex-direction:column;gap:8px;margin-bottom:1.25rem;padding-top:1.25rem}
-.wgroup-headers{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px;padding-top:1.25rem}
+.wgroup-headers{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:10px;padding-top:1.25rem}
 .wgroup-head{width:100%;text-align:center;padding:.7rem 1rem;background:#fff;border:.5px solid #E8E4DD;border-radius:12px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:600;color:#1C2130;display:flex;justify-content:space-between;align-items:center;gap:8px;transition:all .15s}
 .wgroup-head span:first-child{flex:1;text-align:center}
 .wgroup-head:hover{border-color:#6B8AFF}
 .wgroup-head.open{background:#F6F4F0;border-color:#6B8AFF}
 .wgroup-head .wg-chev{font-size:11px;color:#6B8AFF;transition:transform .2s;flex-shrink:0}
 .wgroup-head.open .wg-chev{transform:rotate(90deg)}
-.wgroup-bodies{margin-bottom:1.25rem;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.wgroup-bodies{margin-bottom:1.25rem;display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
 .wgroup-body{display:none;flex-direction:column;align-items:stretch;justify-self:stretch;gap:8px;padding:.75rem;border:.5px solid #E8E4DD;border-radius:12px;background:#fff;width:auto}
 #wgbody1{grid-column:1}
 #wgbody2{grid-column:2}
 #wgbody3{grid-column:3}
 #wgbody4{grid-column:4}
-@media (max-width:640px){.wgroup-bodies{grid-template-columns:repeat(2,1fr)}#wgbody1,#wgbody3{grid-column:1}#wgbody2,#wgbody4{grid-column:2}}
+#wgbody5{grid-column:5}
+#wgbody6{grid-column:6}
+@media (max-width:640px){.wgroup-bodies{grid-template-columns:repeat(2,1fr)}#wgbody1,#wgbody3,#wgbody5{grid-column:1}#wgbody2,#wgbody4,#wgbody6{grid-column:2}}
 .wgroup-body.open{display:flex}
 .wgroup-body .wtab{width:100%;text-align:center}
 @media (max-width:640px){.wgroup-headers{grid-template-columns:repeat(2,1fr)}}
@@ -540,6 +542,8 @@ body{background:#f4fbff !important}
     <button class="wgroup-head" onclick="toggleWGroup(2,this)"><span>Week 6–10</span><span class="wg-chev">▸</span></button>
     <button class="wgroup-head" onclick="toggleWGroup(3,this)"><span>Week 11–15</span><span class="wg-chev">▸</span></button>
     <button class="wgroup-head" onclick="toggleWGroup(4,this)"><span>Week 16–19</span><span class="wg-chev">▸</span></button>
+    <button class="wgroup-head" onclick="toggleWGroup(5,this)"><span>Week 20–24</span><span class="wg-chev">▸</span></button>
+    <button class="wgroup-head" onclick="toggleWGroup(6,this)"><span>Week 25–29</span><span class="wg-chev">▸</span></button>
   </div>
   <div class="wgroup-bodies" id="wgroupBodies">
     <div class="wgroup-body open" id="wgbody1">
@@ -568,6 +572,20 @@ body{background:#f4fbff !important}
       <button class="wtab" onclick="showW(17,this)">Week 17</button>
       <button class="wtab" onclick="showW(18,this)">Week 18</button>
       <button class="wtab" onclick="showW(19,this)">Week 19</button>
+    </div>
+    <div class="wgroup-body" id="wgbody5">
+      <button class="wtab" onclick="showW(20,this)">Week 20</button>
+      <button class="wtab" onclick="showW(21,this)">Week 21</button>
+      <button class="wtab" onclick="showW(22,this)">Week 22</button>
+      <button class="wtab" onclick="showW(23,this)">Week 23</button>
+      <button class="wtab" onclick="showW(24,this)">Week 24</button>
+    </div>
+    <div class="wgroup-body" id="wgbody6">
+      <button class="wtab" onclick="showW(25,this)">Week 25</button>
+      <button class="wtab" onclick="showW(26,this)">Week 26</button>
+      <button class="wtab" onclick="showW(27,this)">Week 27</button>
+      <button class="wtab" onclick="showW(28,this)">Week 28</button>
+      <button class="wtab" onclick="showW(29,this)">Week 29</button>
     </div>
   </div>
 
@@ -2467,6 +2485,436 @@ body{background:#f4fbff !important}
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="wpanel" id="w20">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">58</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 58A–58B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 58A · Investigating a Problem That Only Shows Up in Real Use</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Walk me through how you start investigating a problem that only happens in real operations, not in testing.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">First I <span class="hl">reproduce and isolate it</span>: check records, reports and recent changes to see what's different. Then I form a hypothesis and test it, rather than changing things randomly.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you do when you can't reproduce the problem yourself?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I compare the conditions: data, users, timing, settings. I'd <span class="hl">ask the people who see it to show me</span>, because guessing without evidence wastes time.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you decide between a quick workaround and a proper fix?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">If people are affected right now, I <span class="hl">stabilise first</span> with a workaround. Then I schedule the proper fix and write it down so it isn't forgotten.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a problem that took you a long time to find.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">A report was wrong only at month end. I <span class="hl">narrowed it down by comparing day by day</span>, and it turned out to be a time zone difference in one data source. Now I check dates first.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">reproduce</div><div class="vc">isolate</div><div class="vc">hypothesis</div><div class="vc">workaround</div><div class="vc">recent changes</div><div class="vc">evidence</div><div class="vc">narrow down</div><div class="vc">regression</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 58B · Scenario: Something Goes Wrong During a Client Demo</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Something Goes Wrong During a Client Demo</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: You are presenting your team's solution to an important client when it suddenly stops working on screen. Your manager is in the room.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What would you say and do in the first 30 seconds?</div><div class="dq-p">• How do you keep the client's confidence while you investigate?</div><div class="dq-p">• What would you do after the meeting?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">How did you stay calm under pressure?</div><div class="qi" style="margin-bottom:4px">Would you tell the client the real cause? Why or why not?</div><div class="qi" style="margin-bottom:4px">What would you change to prevent a repeat?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">stay calm</div><div class="vc">buy time</div><div class="vc">workaround</div><div class="vc">backup plan</div><div class="vc">apologise</div><div class="vc">follow up</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">59</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 59A–59B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 59A · Root Cause Analysis</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's the difference between a symptom and a root cause?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">A symptom is what people see, like late deliveries. The root cause is <span class="hl">why it happens</span>, for example an unclear handover step. If you only fix the symptom, it comes back.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Describe a method you use to find root causes.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I like the <span class="hl">5 Whys</span>: keep asking why until you reach something you can actually change, usually a process or a decision, not a person.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you avoid blaming individuals in a post-mortem?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I focus on <span class="hl">what the process allowed to happen</span>. If one mistake can cause a big problem, the real gap is missing checks or unclear ownership.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you include in a good post-mortem?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">A clear timeline, the impact, the root cause, what went well, and <span class="hl">concrete action items with owners and dates</span>. Without owners, nothing changes.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">root cause</div><div class="vc">symptom</div><div class="vc">5 Whys</div><div class="vc">post-mortem</div><div class="vc">timeline</div><div class="vc">contributing factor</div><div class="vc">action item</div><div class="vc">blameless</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 59B · Scenario: A Mistake Surfaces Late on Friday</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: A Mistake Surfaces Late on Friday</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: It's 5:30 pm on Friday. You discover that a teammate sent the client an outdated version of an important deliverable, and they have already gone offline. The client reviews it Monday morning.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you check first?</div><div class="dq-p">• Do you contact the client now or wait? Why?</div><div class="dq-p">• Who do you inform, and how?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">Would you contact your teammate off hours? Why?</div><div class="qi" style="margin-bottom:4px">How do you make sure it's fixed properly, not just quickly?</div><div class="qi" style="margin-bottom:4px">What rule would you suggest to avoid this?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">outdated version</div><div class="vc">escalate</div><div class="vc">correct</div><div class="vc">client-facing</div><div class="vc">deadline</div><div class="vc">follow up</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">60</div><div class="sbadge ba">Presentation</div><div class="stitle">Should Friends Always Split the Bill Equally?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Should Friends Always Split the Bill Equally?</div><div class="pdesc">Take a position on whether splitting the bill evenly is fair, or whether people should pay for what they ordered. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position on splitting the bill?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for splitting equally?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for paying separately?</div><div class="qi" style="margin-bottom:4px">How do you handle it when friends earn very different incomes?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w21">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">61</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 61A–61B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 61A · Conflicting Priorities</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Two urgent tasks arrive at once. How do you decide what to do first?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I ask about <span class="hl">impact and deadline</span> for each, then check dependencies. If I still can't choose, I take both to my manager rather than guess.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you do when two managers give you conflicting instructions?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I put them in the same conversation: 'Here are both requests and my capacity, which one comes first?' <span class="hl">I make the trade-off visible</span> instead of choosing silently.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you say no without damaging a relationship?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I explain what I'm currently committed to and <span class="hl">offer an alternative</span>: a later date, a smaller scope, or a different person who can help.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Give an example of a time you had to reprioritise.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Mid-project a customer issue appeared. I <span class="hl">paused a lower-value task</span>, told the owner why, and moved it to the next cycle. Everyone knew the trade-off.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">prioritise</div><div class="vc">trade-off</div><div class="vc">urgent vs important</div><div class="vc">capacity</div><div class="vc">stakeholder</div><div class="vc">deadline</div><div class="vc">dependency</div><div class="vc">push back</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 61B · Scenario: Two Bosses, One Deadline</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Two Bosses, One Deadline</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: Your team lead wants you to finish an internal improvement this week. A senior stakeholder wants a new deliverable by Wednesday. You can only do one well.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How do you start the conversation?</div><div class="dq-p">• What information do you gather before deciding?</div><div class="dq-p">• What compromise could you propose?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">Who has the final say, and how do you find out?</div><div class="qi" style="margin-bottom:4px">How do you protect your workload without sounding lazy?</div><div class="qi" style="margin-bottom:4px">What if both refuse to compromise?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">workload</div><div class="vc">negotiate</div><div class="vc">escalate</div><div class="vc">compromise</div><div class="vc">deliverable</div><div class="vc">align</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">62</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 62A–62B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 62A · Tight Deadlines &amp; Cutting Scope</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">The deadline has just moved up by a week. What's your first move?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I re-estimate what's left and <span class="hl">separate must-haves from nice-to-haves</span>. Then I show the options: cut scope, add people, or move the date.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you decide what to cut?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I ask what gives <span class="hl">the most value for the least effort</span>. Anything risky or rarely used goes first, and I check the cut with the stakeholders.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Would you ever work overtime to hit a deadline?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Occasionally, for a real emergency. But if it becomes a pattern, the <span class="hl">plan is broken</span>, and I'd say that directly.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you keep quality when time is short?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I protect the critical path: <span class="hl">checks on the most important deliverables</span> and a second pair of eyes. I'd rather deliver less that is right than more that is wrong.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">deadline</div><div class="vc">scope</div><div class="vc">must-have</div><div class="vc">nice-to-have</div><div class="vc">MVP</div><div class="vc">critical path</div><div class="vc">re-estimate</div><div class="vc">deliver</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 62B · Scenario: The Deadline Just Moved Up</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: The Deadline Just Moved Up</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: On Monday you learn that a delivery planned for two weeks from now must be ready this Friday. The client has an important event.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What questions do you ask in the first hour?</div><div class="dq-p">• How do you reorganise your team's work?</div><div class="dq-p">• What would you refuse to compromise on?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">How do you tell the team without causing panic?</div><div class="qi" style="margin-bottom:4px">What would you do if the team says it's impossible?</div><div class="qi" style="margin-bottom:4px">How would you review it afterwards?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">re-plan</div><div class="vc">trim</div><div class="vc">minimum viable</div><div class="vc">risk</div><div class="vc">sign-off</div><div class="vc">overtime</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">63</div><div class="sbadge ba">Presentation</div><div class="stitle">Are Dating Apps Making Relationships Better or Worse?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Are Dating Apps Making Relationships Better or Worse?</div><div class="pdesc">Present a clear position on whether dating apps help people find meaningful relationships or make dating shallow. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position on dating apps?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument in their favour?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument against them?</div><div class="qi" style="margin-bottom:4px">Would you meet a partner this way? Why or why not?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w22">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">64</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 64A–64B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 64A · Unclear Requirements</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">You receive a vague request. What do you do?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I ask clarifying questions about <span class="hl">the goal, the user and the success criteria</span> before starting. Doing the wrong thing fast is still waste.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you confirm you understood the requirement correctly?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I <span class="hl">write it back in my own words</span>, with examples or a quick sketch, and ask the requester to confirm.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What if the stakeholder can't answer your questions?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I state <span class="hl">my assumptions in writing</span>, deliver the smallest version and show it early. Feedback on something real is easier to give.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Give an example of when unclear requirements caused a problem.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">We built a report nobody used because we hadn't asked what decision it supported. Now I always ask <span class="hl">what problem this solves</span>.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">requirement</div><div class="vc">acceptance criteria</div><div class="vc">assumption</div><div class="vc">clarify</div><div class="vc">ambiguity</div><div class="vc">user story</div><div class="vc">stakeholder</div><div class="vc">prototype</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 64B · Scenario: The Client Changed Their Mind Mid-Project</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: The Client Changed Their Mind Mid-Project</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: Halfway through a delivery cycle, the client says the work you're doing is not what they wanted and describes something quite different.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How do you respond in the meeting?</div><div class="dq-p">• How do you protect the team's commitments?</div><div class="dq-p">• How do you prevent this next time?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">Do you accept the change immediately? Why or why not?</div><div class="qi" style="margin-bottom:4px">How do you explain the cost of the change?</div><div class="qi" style="margin-bottom:4px">What written proof would you keep?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">change request</div><div class="vc">scope</div><div class="vc">impact</div><div class="vc">re-plan</div><div class="vc">sign off</div><div class="vc">expectations</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">65</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 65A–65B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 65A · Estimation Under Uncertainty</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you estimate a task you've never done before?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I break it into smaller parts, estimate each, and <span class="hl">give a range, not a single number</span>. For unknowns I add a short investigation first.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Why are estimates so often wrong?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">We forget reviews, meetings, rework and surprises. People are also <span class="hl">optimistic about the happy path</span>. I add buffer for the unknown.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you say when asked 'how long will it take?' on the spot?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">'My rough range is two to four days, <span class="hl">and I'll confirm after looking at the details</span>.' A range with a promise to refine is honest.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you do when you realise you'll miss your estimate?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I <span class="hl">tell people early</span>, explain what changed and offer options. Surprises at the deadline destroy trust.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">estimate</div><div class="vc">range</div><div class="vc">buffer</div><div class="vc">investigation</div><div class="vc">unknown</div><div class="vc">happy path</div><div class="vc">break down</div><div class="vc">assumption</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 65B · Scenario: An Estimate You Must Give Right Now</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: An Estimate You Must Give Right Now</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: In a meeting, a senior manager asks you to say how long a large, unfamiliar piece of work will take. Everyone is waiting for your answer.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you say first?</div><div class="dq-p">• What assumptions do you state out loud?</div><div class="dq-p">• How do you follow up afterwards?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What if the manager insists on a single number?</div><div class="qi" style="margin-bottom:4px">How do you handle pressure to shorten it?</div><div class="qi" style="margin-bottom:4px">What would you do if the estimate turned out too low?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">ballpark</div><div class="vc">assumption</div><div class="vc">confidence level</div><div class="vc">commit</div><div class="vc">dependency</div><div class="vc">follow-up</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">66</div><div class="sbadge ba">Presentation</div><div class="stitle">Is Ghosting Ever Acceptable?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Is Ghosting Ever Acceptable?</div><div class="pdesc">Take a position on whether suddenly cutting off contact with someone, in dating or friendship, can ever be justified. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position on ghosting?</div><div class="qi" style="margin-bottom:4px">In what situations might it be acceptable?</div><div class="qi" style="margin-bottom:4px">What is a kinder way to end contact?</div><div class="qi" style="margin-bottom:4px">Has anyone ever ghosted you, and how did it feel?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w23">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">67</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 67A–67B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 67A · Build vs Buy: Choosing a Solution</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you decide whether to build something in-house or buy it?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I compare <span class="hl">total cost, time to value and how core it is</span> to our business. If it's not our differentiator, buying usually wins.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What criteria do you use to compare two technical options?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Fit to requirements, <span class="hl">maintenance cost, team skills, community support and risk of lock-in</span>. I score them so the decision is transparent.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you present a recommendation to your team?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I state the <span class="hl">recommendation first, then the evidence and the downsides</span>. People trust a trade-off that's honestly shown.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What if the team disagrees with your choice?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I listen for <span class="hl">facts I missed</span>. If the disagreement is about preference, I suggest a time-boxed proof of concept to test it.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">build vs buy</div><div class="vc">total cost</div><div class="vc">lock-in</div><div class="vc">proof of concept</div><div class="vc">criteria</div><div class="vc">maintenance</div><div class="vc">vendor</div><div class="vc">trade-off</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 67B · Scenario: Choosing a Tool for the Team</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Choosing a Tool for the Team</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: Your team needs a new project-tracking tool. Half the team likes the popular paid option, and the other half prefers a free open-source one.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How do you collect everyone's needs?</div><div class="dq-p">• How do you compare the two fairly?</div><div class="dq-p">• How do you make the final decision stick?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What would make you change your recommendation?</div><div class="qi" style="margin-bottom:4px">How do you handle someone who is strongly against it?</div><div class="qi" style="margin-bottom:4px">How do you review the decision after three months?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">shortlist</div><div class="vc">pilot</div><div class="vc">licence</div><div class="vc">adoption</div><div class="vc">migration</div><div class="vc">feedback</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">68</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 68A–68B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 68A · Finding Bottlenecks</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">A process or system is slower than expected. How do you find out why?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I <span class="hl">measure before I change anything</span>: where does time go, which step has the longest queue? Then I fix the biggest bottleneck first.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What are common causes of slowdowns?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans"><span class="hl">Too many handovers, waiting for approvals, manual steps</span> and one overloaded person or system. Often it's the process, not the people.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How would you prepare for ten times more volume?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Test the <span class="hl">breaking point</span> with realistic numbers, remove manual steps, share the load and set up early warnings.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you balance optimising against delivering new work?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I optimise <span class="hl">where the data shows pain</span>. Improving everything wastes effort, but ignoring slowdowns loses customers.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">bottleneck</div><div class="vc">throughput</div><div class="vc">delay</div><div class="vc">queue</div><div class="vc">handover</div><div class="vc">volume</div><div class="vc">measure</div><div class="vc">capacity</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 68B · Scenario: Everything Slows Down on the Busiest Day</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Everything Slows Down on the Busiest Day</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: It's the busiest day of the year. Volume has tripled and customers are complaining that orders take ten times longer to process. You're the one on call.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you look at first?</div><div class="dq-p">• What quick actions can reduce the damage?</div><div class="dq-p">• How do you communicate to the business?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What if your first fix doesn't work?</div><div class="qi" style="margin-bottom:4px">When would you add more people instead of fixing the process?</div><div class="qi" style="margin-bottom:4px">What would you prepare for next year?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">peak</div><div class="vc">monitor</div><div class="vc">add capacity</div><div class="vc">prioritise</div><div class="vc">degrade gracefully</div><div class="vc">backlog</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">69</div><div class="sbadge ba">Presentation</div><div class="stitle">Should Couples Live Together Before Marriage?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Should Couples Live Together Before Marriage?</div><div class="pdesc">Present a clear position on whether moving in together first helps or harms a relationship. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for living together first?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for waiting?</div><div class="qi" style="margin-bottom:4px">How much should family expectations matter in this decision?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w24">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">70</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 70A–70B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 70A · Disagreeing on an Approach</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you handle a disagreement with a teammate about the approach?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I ask them to <span class="hl">explain their reasoning first</span>, then share mine. Often we disagree on priorities, not on facts.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you do when you can't reach agreement?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I suggest <span class="hl">a small experiment or a data point</span> to decide, or I ask a neutral senior person. Then we commit and move on.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a time you changed your mind.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">A colleague proposed a simpler approach than mine. After comparing, <span class="hl">theirs was easier to maintain</span>, so I supported it and said so in the review.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you disagree with your manager respectfully?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">In private, with <span class="hl">facts and an alternative</span>, and I ask what constraints I might not see. If they still decide otherwise, I commit.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">disagree</div><div class="vc">reasoning</div><div class="vc">compromise</div><div class="vc">data point</div><div class="vc">commit</div><div class="vc">perspective</div><div class="vc">constructive</div><div class="vc">escalate</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 70B · Scenario: A Teammate Insists on a Risky Approach</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: A Teammate Insists on a Risky Approach</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: A senior colleague wants to replace a working process with a brand-new approach two weeks before a major milestone. You think it's too risky.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How do you raise your concern?</div><div class="dq-p">• What evidence do you bring?</div><div class="dq-p">• What alternative do you offer?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What if they take it personally?</div><div class="qi" style="margin-bottom:4px">When is it right to escalate?</div><div class="qi" style="margin-bottom:4px">How do you keep the relationship afterwards?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">risk assessment</div><div class="vc">push back</div><div class="vc">alternative</div><div class="vc">timeline</div><div class="vc">buy-in</div><div class="vc">respectfully</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">71</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 71A–71B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 71A · Feedback &amp; Review Conflicts</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you give critical feedback on someone's work?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I comment on <span class="hl">the work, not the person</span>, explain why, and suggest a fix. I also point out what's done well.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you react when someone criticises your work?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I try to <span class="hl">assume good intent</span> and ask if I don't understand. If I disagree, I explain my reasoning calmly.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you do when a review turns into a long argument?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I move it to <span class="hl">a quick call</span> and summarise the outcome in writing. Text can make tone worse.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What makes a review request easy to respond to?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Small, <span class="hl">focused on one thing</span>, with clear context and what kind of feedback you want. Small requests get faster, better feedback.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">feedback</div><div class="vc">nitpick</div><div class="vc">review</div><div class="vc">approve</div><div class="vc">request changes</div><div class="vc">standards</div><div class="vc">constructive</div><div class="vc">tone</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 71B · Scenario: Harsh Feedback on Your Work</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Harsh Feedback on Your Work</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: A teammate leaves ten sharp comments on your document, including 'this approach is weak'. Several of them seem unfair.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How do you respond in writing?</div><div class="dq-p">• Do you talk to them directly? How?</div><div class="dq-p">• What do you learn from it?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What if the comments are partly right?</div><div class="qi" style="margin-bottom:4px">How would you tell the reviewer about their tone?</div><div class="qi" style="margin-bottom:4px">What rules would you suggest for the team?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">harsh</div><div class="vc">tone</div><div class="vc">defensive</div><div class="vc">clarify</div><div class="vc">one-on-one</div><div class="vc">take on board</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">72</div><div class="sbadge ba">Presentation</div><div class="stitle">Are Big Weddings Worth the Money?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Are Big Weddings Worth the Money?</div><div class="pdesc">Argue whether spending heavily on a wedding is a meaningful tradition or a waste of money. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your position on big weddings?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for a big celebration?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for keeping it small?</div><div class="qi" style="margin-bottom:4px">How would you plan your own wedding?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w25">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">73</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 73A–73B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 73A · Bad Data &amp; Inconsistent Results</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">A report shows numbers that look wrong. What do you do?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I check <span class="hl">the source, filters and time range</span> first, then trace one record end to end. Most 'wrong numbers' come from definitions, not errors.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you validate data quality?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Row counts, <span class="hl">empty and duplicate checks</span>, range checks and comparing totals against a trusted source.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you communicate when you find an error that's already been shared?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Quickly and plainly: <span class="hl">what was wrong, who is affected, the corrected figures</span> and how we'll prevent it. No excuses.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you prevent bad data in the first place?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Validation at input, <span class="hl">regular automated checks</span>, clear ownership of each dataset and alerts on unusual changes.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">data quality</div><div class="vc">duplicate</div><div class="vc">empty value</div><div class="vc">validation</div><div class="vc">source of truth</div><div class="vc">process</div><div class="vc">discrepancy</div><div class="vc">reconcile</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 73B · Scenario: The Dashboard Numbers Don't Match</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: The Dashboard Numbers Don't Match</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: On Monday morning, the sales dashboard shows revenue 20 percent lower than finance's report. The director is asking for an explanation by noon.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you check first?</div><div class="dq-p">• What do you tell the director in the meantime?</div><div class="dq-p">• How do you find which number is right?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What if both numbers are technically correct?</div><div class="qi" style="margin-bottom:4px">How do you present the finding?</div><div class="qi" style="margin-bottom:4px">What would you change so it doesn't happen again?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">definition</div><div class="vc">filter</div><div class="vc">reconcile</div><div class="vc">stakeholder</div><div class="vc">explanation</div><div class="vc">audit</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">74</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 74A–74B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 74A · Quality Checks Under Pressure</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Would you release with a known issue? Why or why not?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">It depends on <span class="hl">severity and workaround</span>. A cosmetic issue can go if it's documented; a data-loss issue can't. I'd make the call explicit with stakeholders.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you decide what to check when time is short?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I check <span class="hl">the riskiest and most-used flows</span> first: payments, access, data saving. Edge cases come after.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What's your view on checks and testing that can be repeated automatically?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">They're an investment: <span class="hl">slow to set up, fast to pay back</span>, especially for repeated work. I don't aim for 100 percent, I aim for confidence.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you do when the testers and builders disagree on whether something is a defect?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">We go back to <span class="hl">the requirement or acceptance criteria</span>. If it's unclear, the product owner decides, and we update the ticket.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">severity</div><div class="vc">regression</div><div class="vc">coverage</div><div class="vc">edge case</div><div class="vc">workaround</div><div class="vc">release criteria</div><div class="vc">acceptance</div><div class="vc">QA</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 74B · Scenario: Release With a Known Issue?</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Release With a Known Issue?</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: It's release day. Testing found a medium-severity issue that appears in about 2 percent of cases. The launch cannot be moved.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What information do you need before deciding?</div><div class="dq-p">• What options do you present?</div><div class="dq-p">• How do you communicate your decision?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">Who should make the final decision?</div><div class="qi" style="margin-bottom:4px">What would change your answer?</div><div class="qi" style="margin-bottom:4px">What would you do after release?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">go or no-go</div><div class="vc">mitigation</div><div class="vc">risk</div><div class="vc">fix later</div><div class="vc">sign-off</div><div class="vc">release notes</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">75</div><div class="sbadge ba">Presentation</div><div class="stitle">Is It Better to Live Close to Your Family or Far Away?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Is It Better to Live Close to Your Family or Far Away?</div><div class="pdesc">Present a clear position on whether adults are better off living near their parents and relatives or building a life elsewhere. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position?</div><div class="qi" style="margin-bottom:4px">What are the biggest benefits of living close to family?</div><div class="qi" style="margin-bottom:4px">What are the benefits of living far away?</div><div class="qi" style="margin-bottom:4px">Where do you see yourself living in ten years?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w26">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">76</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 76A–76B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 76A · Owning a Mistake</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a mistake you made at work.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I sent a client a report <span class="hl">before double-checking the figures</span>, and one number was wrong. I told my lead immediately, sent a correction the same day and added a checklist.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Why is it important to report mistakes quickly?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Because <span class="hl">small problems grow when hidden</span>. Fast reporting gives the team time to contain the damage.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you do first when you realise you've made an error?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Stop the damage, <span class="hl">tell the people affected</span>, then fix. I leave the root cause analysis for after the fire is out.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What did you change afterwards?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I added <span class="hl">a pre-send checklist and a second reviewer</span> for client reports. A good lesson becomes a process.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">mistake</div><div class="vc">own it</div><div class="vc">take responsibility</div><div class="vc">contain</div><div class="vc">lesson learned</div><div class="vc">checklist</div><div class="vc">transparent</div><div class="vc">accountable</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 76B · Scenario: You Accidentally Overwrote Important Data</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: You Accidentally Overwrote Important Data</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: You saved over the shared master file that the whole team uses, and the previous version is a day old.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you do in the first minute?</div><div class="dq-p">• Who do you contact and how do you phrase it?</div><div class="dq-p">• How do you work on recovery?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">How do you handle the fear of being blamed?</div><div class="qi" style="margin-bottom:4px">What would you tell the people affected?</div><div class="qi" style="margin-bottom:4px">What safeguards would you add?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">restore</div><div class="vc">backup</div><div class="vc">disclose</div><div class="vc">damage control</div><div class="vc">safeguard</div><div class="vc">apology</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">77</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 77A–77B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 77A · Learning From a Failed Project</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a project that didn't go as planned.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">We <span class="hl">underestimated integration work</span> with a third party and missed the launch by two months. I learned to test integrations early.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What signs showed the project was in trouble?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans"><span class="hl">Repeated small delays</span>, unclear ownership and people avoiding bad news. In hindsight we should have spoken sooner.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What would you do differently now?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Run a <span class="hl">risk review at the start</span>, set earlier checkpoints and make it normal to say 'we're behind'.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you keep morale after a failure?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Acknowledge it honestly, <span class="hl">focus on lessons, not blame</span>, and celebrate what did work. The team needs to feel safe to try again.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">setback</div><div class="vc">lessons learned</div><div class="vc">risk review</div><div class="vc">checkpoint</div><div class="vc">hindsight</div><div class="vc">morale</div><div class="vc">retrospective</div><div class="vc">early warning</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 77B · Scenario: Your Project Is Cancelled</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Your Project Is Cancelled</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: After six months of work, management cancels your project because priorities changed. The team is demotivated.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How do you respond when you hear the news?</div><div class="dq-p">• How do you talk to your team?</div><div class="dq-p">• What do you do with the work already done?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">How do you stay motivated afterwards?</div><div class="qi" style="margin-bottom:4px">What would you ask management?</div><div class="qi" style="margin-bottom:4px">What do you take to your next project?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">cancelled</div><div class="vc">priorities</div><div class="vc">demotivated</div><div class="vc">retrospective</div><div class="vc">salvage</div><div class="vc">move on</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">78</div><div class="sbadge ba">Presentation</div><div class="stitle">Should You Lend Money to Friends or Family?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Should You Lend Money to Friends or Family?</div><div class="pdesc">Take a position on whether lending money to people close to you is an act of care or a risk to the relationship. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for lending?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument for saying no?</div><div class="qi" style="margin-bottom:4px">What rules would you set if you did lend money?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w27">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">79</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 79A–79B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 79A · Managing Stakeholder Expectations</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you manage expectations when a project is behind?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Tell them <span class="hl">early, with facts and options</span>, not at the last minute. A new plan with a clear reason is easier to accept.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you say 'this is not possible' constructively?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I explain <span class="hl">what is possible instead</span>: 'We can't do all of it by Friday, but we can deliver the core part.' Offer a path.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What do you include in a status update?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans"><span class="hl">Progress, risks and what I need from them.</span> Short and honest. Decision-makers want to know what to decide.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you handle a stakeholder who is never satisfied?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I clarify <span class="hl">what success looks like in writing</span>, agree on checkpoints, and show progress against that, not against their changing feelings.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">expectation</div><div class="vc">stakeholder</div><div class="vc">status update</div><div class="vc">risk</div><div class="vc">transparent</div><div class="vc">options</div><div class="vc">checkpoint</div><div class="vc">sign-off</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 79B · Scenario: Telling the Boss the Project Will Be Late</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Telling the Boss the Project Will Be Late</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: You realise your project will miss its deadline by three weeks. Your director has been telling the client it's on track.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• When and how do you tell them?</div><div class="dq-p">• What do you bring to the conversation?</div><div class="dq-p">• How do you protect trust?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What if the director reacts angrily?</div><div class="qi" style="margin-bottom:4px">How do you phrase the reason without excuses?</div><div class="qi" style="margin-bottom:4px">What would you do differently earlier?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">on track</div><div class="vc">slip</div><div class="vc">recovery plan</div><div class="vc">bad news</div><div class="vc">early</div><div class="vc">commit</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">80</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 80A–80B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 80A · Helping a Junior Who Is Stuck</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">A junior developer has been stuck for two days. What do you do?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I sit with them and <span class="hl">ask questions instead of giving the answer</span>: what have you tried, what do you expect, what happens? Often they find it themselves.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you balance helping with your own work?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I agree on <span class="hl">a time limit</span>, like thirty minutes of pairing, and show them how to search and debug so they need me less.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you encourage people to ask for help sooner?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Say that <span class="hl">asking early is normal</span>, and share my own examples of getting stuck. Safety matters more than speed.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What makes feedback to a junior effective?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">It's <span class="hl">specific, timely and kind</span>, with one or two priorities. Too many corrections overwhelm people.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">mentor</div><div class="vc">pair programming</div><div class="vc">guide</div><div class="vc">stuck</div><div class="vc">ask for help</div><div class="vc">feedback</div><div class="vc">growth</div><div class="vc">walk through</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 80B · Scenario: The Junior Who Never Asks for Help</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: The Junior Who Never Asks for Help</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: A new junior has been silent in standups for a week and their task hasn't moved. You suspect they're stuck but afraid to say so.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• How do you start the conversation?</div><div class="dq-p">• What do you do to make it safe for them?</div><div class="dq-p">• How do you follow up?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">How do you avoid making them feel judged?</div><div class="qi" style="margin-bottom:4px">What if they say it's fine?</div><div class="qi" style="margin-bottom:4px">What would you tell your manager?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">approachable</div><div class="vc">safe space</div><div class="vc">check in</div><div class="vc">small step</div><div class="vc">encourage</div><div class="vc">patience</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">81</div><div class="sbadge ba">Presentation</div><div class="stitle">Is Tipping Culture Out of Control?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Is Tipping Culture Out of Control?</div><div class="pdesc">Present a clear position on whether tipping has gone too far or is still a fair way to reward service. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your position on tipping culture?</div><div class="qi" style="margin-bottom:4px">Who benefits most from tipping?</div><div class="qi" style="margin-bottom:4px">What would be a fairer alternative?</div><div class="qi" style="margin-bottom:4px">How do you decide when and how much to tip?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w28">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">82</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 82A–82B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 82A · Learning New Tools &amp; Domains Quickly</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you learn something new on the job?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I <span class="hl">try it on something small and real</span>, read the official material and ask someone experienced to review. Practice beats reading.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a time you had to learn something fast.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">I had one week to learn a new reporting tool. I <span class="hl">focused on what the project needed</span>, built a small sample and asked a colleague to check it.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you decide what to learn first?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">The <span class="hl">minimum needed to be productive</span>, then depth over time. I list what blocks me and learn that.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you admit that you don't know something in an interview?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Honestly: 'I haven't used it, but <span class="hl">here's how I'd approach learning it</span>, and here's something similar I know.'</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">learning curve</div><div class="vc">prototype</div><div class="vc">documentation</div><div class="vc">hands-on</div><div class="vc">ramp up</div><div class="vc">fundamentals</div><div class="vc">upskill</div><div class="vc">steep</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 82B · Scenario: You Must Use a Tool You've Never Seen</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: You Must Use a Tool You've Never Seen</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: In your first week at a new company, your manager asks you to fix an issue in a tool or domain you know nothing about.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you do first?</div><div class="dq-p">• Who and what do you use as resources?</div><div class="dq-p">• How do you show progress quickly?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">How do you avoid pretending to know?</div><div class="qi" style="margin-bottom:4px">How long do you struggle before asking for help?</div><div class="qi" style="margin-bottom:4px">What would you say in your update?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">unfamiliar</div><div class="vc">ramp up</div><div class="vc">ask around</div><div class="vc">small win</div><div class="vc">read up</div><div class="vc">honest</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">83</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 83A–83B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 83A · Replacing an Old System or Process</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">What are the risks of replacing an old system or process?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans"><span class="hl">Hidden dependencies, lost data and downtime.</span> Old ways of working often contain undocumented rules that only appear when something breaks.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How would you plan the change with minimal disruption?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Change <span class="hl">in small steps</span>, run old and new in parallel, test with real cases and have a way back.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you find out what the old system really does?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Read what exists, check records, and <span class="hl">interview the users and original owners</span>. Actual behaviour matters more than the documentation.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you convince the business to invest in the change?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Talk about <span class="hl">risk, cost and speed</span>: the old way is expensive to change and could fail. Show a phased plan with early value.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">legacy</div><div class="vc">migration</div><div class="vc">downtime</div><div class="vc">dependency</div><div class="vc">fallback</div><div class="vc">parallel run</div><div class="vc">cutover</div><div class="vc">phased</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 83B · Scenario: The Old System Everyone Is Afraid Of</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: The Old System Everyone Is Afraid Of</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: Your company runs a ten-year-old system that only one person understands. That person has just resigned, and you've been asked to take it over.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you do in the first week?</div><div class="dq-p">• How do you capture what the person knows?</div><div class="dq-p">• How do you reduce the risk?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What would you refuse to touch at first?</div><div class="qi" style="margin-bottom:4px">How do you persuade management to invest?</div><div class="qi" style="margin-bottom:4px">How do you share the knowledge afterwards?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">knowledge transfer</div><div class="vc">undocumented</div><div class="vc">single point of failure</div><div class="vc">stabilise</div><div class="vc">document</div><div class="vc">handover</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">84</div><div class="sbadge ba">Presentation</div><div class="stitle">Is Online Friendship as Real as In-Person Friendship?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Is Online Friendship as Real as In-Person Friendship?</div><div class="pdesc">Argue whether friendships built mostly through chat, games or social media can be as deep as friendships built face to face. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument that online friends are real friends?</div><div class="qi" style="margin-bottom:4px">What can only in-person friendship give you?</div><div class="qi" style="margin-bottom:4px">Do you have an online friend you've never met? What is that like?</div></div></div>
+</div></div>
+  </div>
+
+  <div class="wpanel" id="w29">
+    <div class="sc2"><div class="shead"><div class="sn2 ng">85</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 85A–85B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 85A · Mock Interview: Behavioural Questions</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a time you solved a difficult problem.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Use STAR: <span class="hl">Situation and task briefly</span>, then spend most of the time on your action, and end with a measurable result.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a time you worked under a tight deadline.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Describe <span class="hl">how you prioritised and communicated</span>, not only that you worked hard. Give the result.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Tell me about a conflict with a coworker.</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Show <span class="hl">respect and a constructive outcome</span>. Avoid blaming; focus on what you did to resolve it.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">Why should we hire you?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Link <span class="hl">your strongest skills to their needs</span>: 'You need someone who can debug in production calmly. Here's an example when I did that.'</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">STAR</div><div class="vc">situation</div><div class="vc">task</div><div class="vc">action</div><div class="vc">result</div><div class="vc">example</div><div class="vc">measurable</div><div class="vc">concise</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 85B · Scenario: Tell Me About Yourself (Under 2 Minutes)</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Tell Me About Yourself (Under 2 Minutes)</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: The interviewer says, 'Tell me about yourself.' You have two minutes to present your background and problem-solving strengths.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What do you say about your present role?</div><div class="dq-p">• Which one story do you use to show problem solving?</div><div class="dq-p">• How do you end to lead into the next question?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">How do you avoid reading your CV out loud?</div><div class="qi" style="margin-bottom:4px">What do you leave out?</div><div class="qi" style="margin-bottom:4px">How do you tailor it to this company?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">background</div><div class="vc">highlight</div><div class="vc">strength</div><div class="vc">relevant</div><div class="vc">achievement</div><div class="vc">looking for</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 ng">86</div><div class="sbadge bg">Speaking</div><div class="stitle">Topic 86A–86B · Problem solving</div></div><div class="sbody">
+<div class="tblock" style="margin-bottom:.85rem"><div class="tlabel"><span class="tdot"></span>Topic 86A · Mock Interview: Situational Problem-Solving</div>
+<div class="qlist"><div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">A process is producing errors in 5 percent of cases. How do you investigate?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Check <span class="hl">recent changes and error patterns</span>: which type, which users, which time. Narrow down, hypothesise, test, and communicate while I work.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">A key person is out and a deadline is at risk. What do you do?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Find <span class="hl">what only they know</span>, reassign or simplify the work, tell the stakeholders early and agree on what can slip.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">A customer reports that information is missing. What are your steps?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">Confirm the report, <span class="hl">check records and history</span>, restore what's possible, and explain to the customer what happened and what we'll do.</div></div>
+<div class="qi-wrap"><div class="qi-q" onclick="toggleAns(this)"><span class="qi-q-text">How do you decide whether to pause a rollout?</span><span class="qi-toggle">Example ▾</span></div><div class="qi-ans">If <span class="hl">people are seriously affected and the fix isn't quick</span>, pause. Stopping is a tool, not a failure.</div></div>
+</div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">error rate</div><div class="vc">pattern</div><div class="vc">capacity</div><div class="vc">pause</div><div class="vc">history</div><div class="vc">investigate</div><div class="vc">narrow down</div><div class="vc">impact</div></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Topic 86B · Scenario: Think Aloud Through an Unknown Problem</div>
+<div class="demo-wrap"><div class="demo-header"><span style="font-size:18px"></span><div class="demo-htitle">Scenario: Think Aloud Through an Unknown Problem</div><div class="demo-hsub">2-min prep · 4-min speaking</div></div>
+<div class="demo-body"><div class="dslabel" style="margin-bottom:.5rem">Situation: The interviewer gives you a problem you've never seen: 'Our weekly report is sometimes ready in one hour and sometimes takes six.' You must think aloud.</div>
+<div class="qlist" style="margin-bottom:.75rem"><div class="dq-p">• What clarifying questions do you ask?</div><div class="dq-p">• How do you structure your investigation?</div><div class="dq-p">• How do you summarise your approach?</div></div>
+<div class="dslabel">How to structure your answer (STAR)</div><div class="qlist" style="margin-bottom:.75rem"><div class="qi"><em>Situation: set the scene in two sentences</em></div><div class="qi"><em>Task: what you were responsible for</em></div><div class="qi"><em>Action: what you did and why, step by step</em></div><div class="qi"><em>Result: the outcome and what you learned</em></div></div>
+<div class="dslabel">Follow-up questions</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What do you do if you don't know the answer?</div><div class="qi" style="margin-bottom:4px">How do you handle hints from the interviewer?</div><div class="qi" style="margin-bottom:4px">How do you show confidence without bluffing?</div></div>
+<button class="vtoggle" onclick="toggleV(this)">Vocabulary</button>
+<div class="vlist"><div class="vc">clarifying question</div><div class="vc">hypothesis</div><div class="vc">narrow down</div><div class="vc">step by step</div><div class="vc">think aloud</div><div class="vc">summarise</div></div></div></div></div>
+</div></div>
+    <div class="sc2"><div class="shead"><div class="sn2 na">87</div><div class="sbadge ba">Presentation</div><div class="stitle">Should Adult Children Financially Support Their Parents?</div></div><div class="sbody">
+<div class="pcard" style="margin-bottom:.85rem"><div class="ptitle">Should Adult Children Financially Support Their Parents?</div><div class="pdesc">Take a position on whether adult children have a duty to support their parents financially, and how cultural expectations affect the answer. Use PREP and real examples.<span class="ptip">PREP structure</span><span class="ptip">Q&amp;A · Post-presentation</span></div></div>
+<div class="tblock"><div class="tlabel"><span class="tdot"></span>Q&amp;A · Post-presentation</div><div class="qlist"><div class="qi" style="margin-bottom:4px">What is your overall position?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument that children should support parents?</div><div class="qi" style="margin-bottom:4px">What is the strongest argument against a fixed obligation?</div><div class="qi" style="margin-bottom:4px">How does culture shape this expectation in your country?</div></div></div>
+</div></div>
   </div>
 
 </div>
